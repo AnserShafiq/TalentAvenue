@@ -98,3 +98,22 @@ export const industriesWeSupport = {
         },
     ]
 }
+
+export const FooterPages = [
+    {
+        Name: 'About Us',
+        Link: '/',
+    },{
+        Name: 'Privacy Policy',
+        Link: '/',
+    },{
+        Name: 'Security & Phishing',
+        Link: '/',
+    },{
+        Name: 'Cookies Policy',
+        Link: '/',
+    },{
+        Name: 'Terms Of Use',
+        Link: '/',
+    },
+]
