@@ -16,7 +16,7 @@ const Header = () => {
     const [lastScrollY, setLastScroll] = useState(0)
 
     const HandleScroll = () => {
-        if(window.scrollY > lastScrollY && lastScrollY > 75){
+        if(window.scrollY > lastScrollY && lastScrollY > 100){
             setShowHeader(false)
         }else{
             setShowHeader(true)

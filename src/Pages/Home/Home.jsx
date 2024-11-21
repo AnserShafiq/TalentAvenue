@@ -1,5 +1,5 @@
 import React from 'react'
-import HS1 from './Section1/H1'
+import HS1 from './Sections/H1'
 
 const Home = () => {
   return (
