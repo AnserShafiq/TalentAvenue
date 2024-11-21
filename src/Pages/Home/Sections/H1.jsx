@@ -3,7 +3,7 @@ import I1 from '../../../Images/Home/Home-1.jpg'
 import UL from '../../../Images/underlineCurve.png'
 import { Link } from 'react-router-dom'
 
-const HS1 = () => {
+const Section1 = () => {
   return (
     <div className='flex flex-col items-center max-h-[65%] relative'>
         <img src={I1} className='object-cover w-full max-h-[95vh] object-top' alt='Talent Avenue - Home 1' />
@@ -22,4 +22,4 @@ const HS1 = () => {
   )
 }
 
-export default HS1
+export default Section1

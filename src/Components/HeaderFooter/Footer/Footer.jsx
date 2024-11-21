@@ -12,8 +12,6 @@ import { FaRegCopyright as CP } from "react-icons/fa6";
 // import './style.css'
 const Footer = () => {
 
-
-
     return (
     <div className={`flex flex-col w-full`}>
         <div className='flex lg:grid flex-col lg:grid-cols-[1fr,1fr,1fr,1fr] lg:gap-3 w-full px-X-footer py-Y-footer bg-[#1a1a1a]'>
