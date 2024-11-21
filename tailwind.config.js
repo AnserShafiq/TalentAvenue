@@ -20,6 +20,9 @@ module.exports = {
         'header-drop-x': '-35%',
         'header-drop-y': '2%',
       },
+      margin:{
+        "sm":'8vh',
+      }
     },
   },
   plugins: [],

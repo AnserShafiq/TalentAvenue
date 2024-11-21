@@ -3,6 +3,7 @@ import BG1 from '../../Images/Home/Home-1.jpg'
 import Section1 from '../CommonSections/Section1.jsx';
 import UL from '../../Images/underlineCurve.png';
 import { Link } from 'react-router-dom';
+import Section2 from './Sections/H2.jsx';
 
 const Home = () => {
   const Section1Data={
@@ -23,6 +24,7 @@ const Home = () => {
   return (
     <>
       <Section1 background={Section1Data.Background} headline={Section1Data.Headline} secondline={section1SecondLine} />
+      <Section2 />
     </>
   )
 }
