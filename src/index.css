@@ -24,7 +24,9 @@ body {
   font-family: 'Sofia Sans',sans-serif;
   background-image: url('./Images/BgElement.png');
   background-size: 3% auto;
+  background-attachment: fixed ;
 }
+
 @media (max-width: 1000px) {
   body{
     background-size:7% auto;

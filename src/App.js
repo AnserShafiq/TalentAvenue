@@ -4,9 +4,10 @@ import Home from './Pages/Home/Home.jsx'
 import Header from './Components/HeaderFooter/Header/Header'
 import Footer from './Components/HeaderFooter/Footer/Footer'
 
-const App = () => {
-  return(
-    <BrowserRouter>
+
+const AppBody = () =>{
+  return (
+    <div>
       <Header />
       <div className=''>
         <Routes>
@@ -14,6 +15,14 @@ const App = () => {
         </Routes>
       </div>
       <Footer />
+    </div>
+  )
+}
+
+const App = () => {
+  return(
+    <BrowserRouter>
+      <AppBody />
     </BrowserRouter>
   )
 

@@ -33,7 +33,7 @@ const Header = () => {
     })
 
     return (
-    <div className={`flex flex-row bg-[#000000] px-X-Header py-Y-Header sticky left-0 top-0 z-10 w-[100%] transition-transform ease-in-out duration-500 transform ${ShowHeader ? 'translate-y-0':'-translate-y-full'}`}>
+    <div className={`flex flex-row bg-[#000000] px-X-Header py-Y-Header sticky left-0 top-0 z-10 w-[100%] transition-transform ease-in-out duration-500 shadow-sm shadow-[#bd996055] transform ${ShowHeader ? 'translate-y-0':'-translate-y-full'}`}>
 
         {/* Mobile Menu */}
         <div className='w-[25%] flex lg:w-[0%] lg:hidden justify-start items-center'>
