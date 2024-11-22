@@ -1,9 +1,9 @@
 import React from 'react'
 import Vid from '../../../Images/Home/intro.mp4'
-import Underlining from '../../../Components/HeaderFooter/Underlining'
+import Underlining from '../../../Components/Underlining'
 const H3 = () => {
   return (
-    <div className='relative'>
+    <div className=' relative'>
         <video className='w-full h-[80vh] lg:h-[85vh] max-h-[85vh] object-cover' src={Vid} loop 
         muted 
         playsInline 

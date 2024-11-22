@@ -4,12 +4,13 @@ import { industriesWeSupport, ourSolutions, whyTalentAvenue } from '../MenuItems
 import { IoMenu as MobileIcon} from "react-icons/io5";
 import MobileSideMenu from './MobileSideMenu';
 import DropDown from './DropDown';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [wtaCheck, setWTACheck] = useState(false);
     const [osCheck, setOSCheck] = useState(false);
     const [iwsCheck, setIWSCheck] = useState(false);
-    const [findCheck, setFindCheck] = useState(false);
+    // const [findCheck, setFindCheck] = useState(false);
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
     const [ShowHeader, setShowHeader] = useState(true);
@@ -43,7 +44,7 @@ const Header = () => {
 
         {/* Logo Section */}
         <div className='w-[50%] lg:w-[20%]'>
-            <img src={Logo} alt='Talent Avenue' className='h-auto w-[200px] lg:w-[7rem] 2xl:w-[200px]' onClick={() => window.location.href='/'} />
+            <img src={Logo} alt='Talent Avenue' className='h-auto w-[200px] lg:w-[12rem] 2xl:w-[200px]' onClick={() => window.location.href='/'} />
         </div>
 
         {/* Desktop Menu Section */}
@@ -97,7 +98,13 @@ const Header = () => {
                 isOpen={iwsCheck}
                 setIsOpen={setIWSCheck}
             />
-            <DropDown title={'Find Candidates'} link={'/'} isOpen={findCheck} setIsOpen={setFindCheck}/>
+            
+            {/* <DropDown title={'Find Candidates'} link={'/'} isOpen={findCheck} setIsOpen={setFindCheck}/>     */}
+        </div>
+
+        {/* Logo Section */}
+        <div className='hidden lg:flex justify-end items-center lg:w-[20%]'>
+            <Link className='text-[1.05rem] 2xl:text-[1.2rem] uppercase px-3 py-[5px] bg-[#A6824B] font-semibold rounded-xl text-w-1 hover:text-g-1 hover:bg-w-1' to={'/'}>Contact Us</Link>
         </div>
 
     </div>

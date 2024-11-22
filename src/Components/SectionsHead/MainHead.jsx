@@ -1,5 +1,5 @@
 import React from 'react'
-import Underlining from '../HeaderFooter/Underlining'
+import Underlining from '../Underlining'
 
 const MainHead = ({title, titleColor, description, descriptionColor}) => {
     
