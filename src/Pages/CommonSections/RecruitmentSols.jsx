@@ -8,14 +8,14 @@ const RecruitmentCard = ({type,mobileView, title, targetIcon,desc,link }) => {
         <div className=''>
             {
                 type=== 'Main' ? (
-                    <div className={`h-[60vh] lg:h-[500px] my-4 lg:my-0 ${mobileView ? 'flex flex-col': 'hidden lg:flex flex-col'} relative shadow-xl shadow-[#bc9a640f] bg-[#0000007f] rounded-[25px] rounded-[25px]`}>
+                    <div className={`h-[57vh] lg:h-[66vh] 2xl:h-[50vh] my-4 lg:my-0 ${mobileView ? 'flex flex-col': 'hidden lg:flex flex-col'} relative shadow-xl shadow-[#bc9a640f] bg-[#0000007f] rounded-[25px] rounded-[25px]`}>
                         <img className='w-full h-[100%] rounded-[25px] object-center' src={targetIcon} alt='Recruitment Solutions By Talent Avenue' />
                     </div>
                 ) :(
-                    <div className={`h-[60vh] lg:h-[500px] my-4 lg:my-0 ${mobileView ? 'flex flex-col': 'hidden lg:flex flex-col'} relative shadow-xl shadow-[#bc9a640f] bg-[#0000007f] justify-center px-4 items-center text-center h-[100%] rounded-[25px]`} >
+                    <div className={`h-[60vh] lg:h-[66vh] 2xl:h-[50vh] my-4 lg:my-0 ${mobileView ? 'flex flex-col': 'hidden lg:flex flex-col'} relative shadow-xl shadow-[#bc9a640f] bg-[#0000007f] justify-center px-4 items-center text-center h-[100%] rounded-[25px]`} >
                         <img className='w-auto mb-5 h-[9rem]' src={targetIcon} alt={`${title}'s Icon`}/>
                         <h3 className='text-[2rem] text-g-1 font-bold capitalize tracking-wider leading-none'>{title}</h3>
-                        <p className='text-[1.3rem] text-w-1 leading-tight font-normal my-4'>{desc}</p>
+                        <p className=' text-cardText-d text-w-1 leading-tight font-normal my-4'>{desc}</p>
                         <Link className='text-g-1 text-[1.3rem] bg-[#ffffff21] px-3 py-1 my-2 rounded-xl' to={link}>{title}</Link>
                     </div>
                 )
@@ -34,7 +34,7 @@ const RecruitmentSols = () => {
     const [mobileCheck, setMobileView] = useState(false);
 
     useEffect(() => {
-        if(window.screenX < 1000){
+        if(window.innerWidth < 1000){
             setMobileView(true);
         }else{
             setMobileView(false)
