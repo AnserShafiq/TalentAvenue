@@ -26,11 +26,14 @@ module.exports = {
       fontSize:{
         'mh-d':'3rem',
         'mh-m': '2.2rem',
-        'mp-d':'1.25rem',
+        'mp-d':'1.4rem',
         'mp-m': '1.15rem',
         'cardTitle-d':'1.7rem',
         'cardTitle-m':'1.4rem',
         'cardText-d':'1.1rem',
+      },
+      screens:{
+        '2xl':'1600px',
       }
     },
   },

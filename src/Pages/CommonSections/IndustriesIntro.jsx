@@ -32,7 +32,7 @@ const IndustriesIntro = () => {
     return (
         <div className='flex flex-col items-center my-sm w-[95%] lg:w-[75%] mx-auto '>
             <MainHead title={BodyText.Name} titleColor={'w-1'} description = {BodyText.Paragraph} descriptionColor={'w-1'} />
-            <div className='grid grid-cols-[1fr] lg:grid-cols-[1fr,1fr,1fr] gap-[5%] my-5'>
+            <div className='flex flex-col mx-[7%] lg:grid lg:grid-cols-[1fr,1fr,1fr] gap-[5%] my-5'>
                 {
                     ThreeIndustries.map((Indus, index) => (  <IndustryCard title={Indus.title} desc={Indus.desc} link={Indus.link} profile={Indus.image} key={index} />))
                 }

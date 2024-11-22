@@ -1,20 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import MainHead from '../../Components/SectionsHead/MainHead'
 import Main from '../../Images/Recruitment/Main.png'
 import RC5 from '../../Images/Recruitment/Ourtrainings.png'
-const RecruitmentCard = ({type, title, targetIcon,desc,link }) => {
+import { Link } from 'react-router-dom'
+const RecruitmentCard = ({type,mobileView, title, targetIcon,desc,link }) => {
     return(
-        <div className='flex flex-col relative shadow shadow-[#bd996055] bg-[#0000006f] rounded-[25px]'>
+        <div className=''>
             {
                 type=== 'Main' ? (
-                    <div className='lg:h-[65vh] bg-[#0000006f] shadow-md shadow-[#bd996013] rounded-[25px]'>
-                        <img className='w-full h-full rounded-[25px] object-center' src={targetIcon} alt='Recruitment Solutions By Talent Avenue' />
+                    <div className={`h-[60vh] lg:h-[500px] my-4 lg:my-0 ${mobileView ? 'flex flex-col': 'hidden lg:flex flex-col'} relative shadow-xl shadow-[#bc9a640f] bg-[#0000007f] rounded-[25px] rounded-[25px]`}>
+                        <img className='w-full h-[100%] rounded-[25px] object-center' src={targetIcon} alt='Recruitment Solutions By Talent Avenue' />
                     </div>
                 ) :(
-                    <div className='lg:h-[65vh] bg-[#0000006f] shadow-md shadow-[#bd996013] rounded-[25px]' >
-                        {title}
-                        {desc}
-                        {link}
+                    <div className={`h-[60vh] lg:h-[500px] my-4 lg:my-0 ${mobileView ? 'flex flex-col': 'hidden lg:flex flex-col'} relative shadow-xl shadow-[#bc9a640f] bg-[#0000007f] justify-center px-4 items-center text-center h-[100%] rounded-[25px]`} >
+                        <img className='w-auto mb-5 h-[9rem]' src={targetIcon} alt={`${title}'s Icon`}/>
+                        <h3 className='text-[2rem] text-g-1 font-bold capitalize tracking-wider leading-none'>{title}</h3>
+                        <p className='text-[1.3rem] text-w-1 leading-tight font-normal my-4'>{desc}</p>
+                        <Link className='text-g-1 text-[1.3rem] bg-[#ffffff21] px-3 py-1 my-2 rounded-xl' to={link}>{title}</Link>
                     </div>
                 )
             }
@@ -24,40 +26,57 @@ const RecruitmentCard = ({type, title, targetIcon,desc,link }) => {
 
 const RecruitmentSols = () => {
     const BodyText = {
-        Name: 'Recruitment Solutions',
+        D_Name: 'Recruitment Solutions',
+        M_Name: 'Recruitment Sols',
         Para: 'Unlock your business potential with Talent Avenue Staffing Solutions. Explore our complete range of services, tailored for organizations of every size and scale.'
     }
 
+    const [mobileCheck, setMobileView] = useState(false);
+
+    useEffect(() => {
+        if(window.screenX < 1000){
+            setMobileView(true);
+        }else{
+            setMobileView(false)
+        }
+    },[setMobileView])
+
     const Recruitments = [
         {
-            type:'Main',
-            img: Main,
-        },{
             type: '',
+            mobile:true,
             title:'Contractual Placements',
             img: RC5,
             desc: 'We manage the entire contract based recruitment process, from candidate search to payroll and administration.',
             link:'/',
         },{
+            type:'Main',
+            mobile:false,
+            img: Main,
+        },{
             type: '',
+            mobile:true,
             title:'Permanent Placements',
             img: RC5,
             desc: 'We manage the entire contract based recruitment process, from candidate search to payroll and administration.',
             link:'/',
         },{
             type: '',
+            mobile:true,
             title:'Business Essentials',
             img: RC5,
             desc: 'We manage the entire contract based recruitment process, from candidate search to payroll and administration.',
             link:'/',
         },{
             type: '',
-            title:'Outsourcing',
+            mobile:false,
+            title:'Managed Outsourcing',
             img: RC5,
             desc: 'We manage the entire contract based recruitment process, from candidate search to payroll and administration.',
             link:'/',
         },{
             type: '',
+            mobile:false,
             title:'Our Trainings',
             img: RC5,
             desc: 'We manage the entire contract based recruitment process, from candidate search to payroll and administration.',
@@ -66,13 +85,16 @@ const RecruitmentSols = () => {
     ]
 
     return (
-        <div className='flex flex-col items-center my-sm w-[95%] lg:w-[75%] mx-auto '>
-            <MainHead title={BodyText.Name} titleColor={'w-1'} description={BodyText.Para} descriptionColor={'w-1'}/>
-            <div className='grid grid-cols-[1fr] lg:grid-cols-[1fr,1fr,1fr] gap-[10%] my-5'>
+        <div className='flex flex-col justify-center items-center my-sm w-[95%] lg:w-[80%] 2xl:w-[70%] h-[100%] mx-auto'>
+            <MainHead title={
+                mobileCheck ? (BodyText.M_Name) : (BodyText.D_Name)
+            } titleColor={'w-1'} description={BodyText.Para} descriptionColor={'w-1'}/>
+            <div className='flex flex-col lg:grid lg:grid-cols-3 w-[80%] 2xl:w-[90%] gap-x-[6%] gap-y-[4%] mt-5 mb-3' >
                 {
-                    Recruitments.map((Child, index) => (  <RecruitmentCard type={Child.type} title={Child.title} desc={Child.desc} link={Child.link} targetIcon={Child.img} key={index} />))
+                    Recruitments.map((Child, index) => (  <RecruitmentCard type={Child.type} mobileView={Child.mobile} title={Child.title} desc={Child.desc} link={Child.link} targetIcon={Child.img} key={index} />))
                 }
             </div>
+            <Link className='block lg:hidden text-[1.3rem] hover:bg-g-1 text-g-1 hover:text-w-1 px-4  py-1 rounded-[20px] border-g-1 mb-7 border-2' to={'/'}>View More</Link>
         </div>
     )
 }
