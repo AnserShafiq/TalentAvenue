@@ -17,7 +17,7 @@ export const whyTalentAvenue = {
     ChildPages: [
         {
             ChildName: 'Why Talent Avenue',
-            Link: '/',
+            Link: '/why-talent-avenue',
         },{
             ChildName: 'About Us',
             Link: '/',

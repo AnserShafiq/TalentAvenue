@@ -44,7 +44,7 @@ const Header = () => {
 
         {/* Logo Section */}
         <div className='w-[50%] lg:w-[20%]'>
-            <img src={Logo} alt='Talent Avenue' className='h-auto w-[200px] lg:w-[12rem] 2xl:w-[200px]' onClick={() => window.location.href='/'} />
+            <img src={Logo} alt='Talent Avenue' className='h-auto w-[200px] cursor-pointer lg:w-[12rem] 2xl:w-[200px]' onClick={() => window.location.href='/'} />
         </div>
 
         {/* Desktop Menu Section */}

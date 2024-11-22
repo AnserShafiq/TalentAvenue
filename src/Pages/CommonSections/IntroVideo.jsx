@@ -1,7 +1,7 @@
 import React from 'react'
-import Vid from '../../../Images/Home/intro.mp4'
-import Underlining from '../../../Components/Underlining'
-const H3 = () => {
+import Vid from '../../Images/Home/intro.mp4'
+import Underlining from '../../Components/Underlining'
+const IntroVideo = () => {
   return (
     <div className=' relative'>
         <video className='w-full h-[80vh] lg:h-[85vh] max-h-[85vh] object-cover' src={Vid} loop 
@@ -19,4 +19,4 @@ const H3 = () => {
   )
 }
 
-export default H3
+export default IntroVideo

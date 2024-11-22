@@ -3,7 +3,6 @@ import BG1 from '../../Images/Home/Home-1.jpg'
 import Section1 from '../CommonSections/Section1.jsx';
 import H2 from './Sections/H2.jsx';
 import Underlining from '../../Components/Underlining.jsx';
-import H3 from './Sections/H3.jsx';
 import IndustriesIntro from '../CommonSections/IndustriesIntro.jsx';
 import RecruitmentSols from '../CommonSections/RecruitmentSols.jsx';
 import ContactCard from '../../Components/Cards/ContactCard.jsx';
@@ -11,6 +10,7 @@ import Location from '../../Images/Home/location.png'
 import People from '../../Images/Home/People.png'
 import Countries from '../../Images/Home/Countries.png';
 import Handshake from '../../Images/Home/Handshake.png'
+import IntroVideo from '../CommonSections/IntroVideo.jsx';
 
 const Home = () => {
   const Section1Data={
@@ -55,9 +55,9 @@ const Home = () => {
 
   return (
     <>
-      <Section1 background={Section1Data.Background} headline={Section1Data.Headline} secondline={section1SecondLine} />
+      <Section1 background={Section1Data.Background} bgPosition={'top'} headline={Section1Data.Headline} secondline={section1SecondLine} UC={true} />
       <H2 />
-      <H3 />
+      <IntroVideo />
       <div className='mb-[5%]'/>
       <ContactCard mainHead={ContactData.mainheading} mainDesc={ContactData.mainDesc} button={ContactData.button} buttonLink={ContactData.buttonLink} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
       <IndustriesIntro />
