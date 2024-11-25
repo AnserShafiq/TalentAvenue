@@ -20,7 +20,7 @@ const MenuSection = ({ menuName, subPages, isOpen, setIsOpen, link }) => {
                             <div className='flex flex-col px-4'>
                                 {
                                     subPages.map((child, index) => (
-                                        <Link key={index} path={child.Link} className='py-2 text-g-1 capitalize hover:text-w-1 text-[1.2rem] leading-tight'>
+                                        <Link key={index} to={child.Link} className='py-2 text-g-1 capitalize hover:text-w-1 text-[1.2rem] leading-tight'>
                                             {child.ChildName}
                                         </Link>
                                     ))
@@ -30,7 +30,7 @@ const MenuSection = ({ menuName, subPages, isOpen, setIsOpen, link }) => {
                     </>
                 ) : (
                     <>
-                        <Link path={link} className={`${isOpen ? 'text-g-1' : 'text-w-1'} text-[1.2rem] cursor-pointer flex justify-between items-center px-1 py-2 transition-colors ease-in-out duration-300`} >
+                        <Link to={link} className={`${isOpen ? 'text-g-1' : 'text-w-1'} text-[1.2rem] cursor-pointer flex justify-between items-center px-1 py-2 transition-colors ease-in-out duration-300`} >
                             {menuName}
                         </Link>
                     </>
