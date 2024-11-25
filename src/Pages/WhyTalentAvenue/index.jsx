@@ -14,6 +14,8 @@ import People from '../../Images/Home/People.png'
 import Handshake from '../../Images/Home/Handshake.png'
 import Underlining from '../../Components/Underlining'
 import IndustriesIntro from '../CommonSections/IndustriesIntro'
+import PoweredByTech from '../CommonSections/PoweredByTech'
+import Testimonials from '../CommonSections/OurTestimonials'
 
 const WhyTalentAvenue = () => {
 
@@ -71,7 +73,7 @@ const WhyTalentAvenue = () => {
 
     return (
         <>
-            <Section1 background={DataOne.background} bgPosition={'center'} headline={DataOne.headline} secondline={DataOne.secondline} UC={false}/>
+            <Section1 background={DataOne.background} bgPosition={'object-center'} headline={DataOne.headline} secondline={DataOne.secondline} UC={false}/>
             <div className=' w-[80%] mx-auto my-[1%] hidden lg:flex flex-row justify-center items-center'>
                 {
                     PageMenu.map((Menu, index) => (
@@ -81,21 +83,34 @@ const WhyTalentAvenue = () => {
                     ))
                 }
             </div>
+            
             <div id='facts&figures'/>
             <FnF />
+            
             <div id=''/>
             <GTJD />
+            
             <div id='solutions'/>
             <RecruitmentSols />
+
             <div className='my-[5%]'>
             <ContactCard mainHead={ContactData.mainheading} mainDesc={ContactData.mainDesc} button={ContactData.button} buttonLink={ContactData.buttonLink} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
             </div>
-            <div id='intrototechnology'/>
+
             <IntroVideo/>
             
             <IndustriesIntro />
+            
+            <div id='intrototechnology'/>
+            <PoweredByTech />
+
+            <div id='testimonials'/>
+            <Testimonials Numbers={['One','Three', 'Five']}/>
 
 
+            <div className='my-[5%]'>
+            <ContactCard mainHead={ContactData.mainheading} mainDesc={ContactData.mainDesc} button={ContactData.button} buttonLink={ContactData.buttonLink} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
+            </div>
         </>
     )
 }

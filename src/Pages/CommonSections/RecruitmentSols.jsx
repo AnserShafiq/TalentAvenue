@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import MainHead from '../../Components/SectionsHead/MainHead'
-import Main from '../../Images/Recruitment/Main.png'
-import RC1 from '../../Images/Recruitment/Temporary.png'
-import RC2 from '../../Images/Recruitment/Permanent.png'
-import RC3 from '../../Images/Recruitment/Business.png'
-import RC4 from '../../Images/Recruitment/Managed.png'
-import RC5 from '../../Images/Recruitment/Ourtrainings.png'
+import Main from '../../Images/Icons/Main.png'
+import RC1 from '../../Images/Icons/Temporary.png'
+import RC2 from '../../Images/Icons/Permanent.png'
+import RC3 from '../../Images/Icons/Business.png'
+import RC4 from '../../Images/Icons/Managed.png'
+import RC5 from '../../Images/Icons/Ourtrainings.png'
 import { Link } from 'react-router-dom'
 const RecruitmentCard = ({type,mobileView, title, targetIcon,desc,link }) => {
     return(

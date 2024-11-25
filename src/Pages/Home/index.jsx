@@ -1,5 +1,5 @@
 import React from 'react';
-import BG1 from '../../Images/Home/Home-1.jpg'
+import BG1 from '../../Images/Home/Home-1.webp'
 import Section1 from '../CommonSections/Section1.jsx';
 import H2 from './Sections/H2.jsx';
 import Underlining from '../../Components/Underlining.jsx';
@@ -55,7 +55,7 @@ const Home = () => {
 
   return (
     <>
-      <Section1 background={Section1Data.Background} bgPosition={'top'} headline={Section1Data.Headline} secondline={section1SecondLine} UC={true} />
+      <Section1 background={Section1Data.Background} bgPosition={'object-top'} headline={Section1Data.Headline} secondline={section1SecondLine} UC={true} />
       <H2 />
       <IntroVideo />
       <div className='mb-[5%]'/>
