@@ -14,12 +14,12 @@ const Testimonials = ({ Numbers }) => {
     return (
         <div className='flex flex-col justify-center items-center my-sm w-[95%] lg:w-[80%] 2xl:w-[70%] h-[100%] mx-auto'>
             <MainHead title={'Our Testimonials'} titleColor={'w-1'}/>
-            <div className='flex flex-col lg:flex-row justify-center items-start mt-3'>
+            <div className='flex flex-col lg:flex-row justify-center w-[80%] lg:w-full items-start mt-3'>
                 {
                     Numbers.map((Data, index) => (
-                        <div className='flex flex-col lg:mx-[1.5%] w-[30%]' key={index}>
-                            <img className='w-[3rem]' src={Commas} alt='Inverted commas'/>
-                            <h3 className='text-testimonials-d mt-4 text-w-1'>{testimonialsData[Data]}</h3>
+                        <div className='flex flex-col my-5 lg:my-none lg:mx-[1.5%] w-full lg:w-[30%]' key={index}>
+                            <img className='w-[2.4rem] lg:w-[3rem]' src={Commas} alt='Inverted commas'/>
+                            <h3 className='text-cardText-d font-[300] lg:text-testimonials-d mt-4 text-w-1'>{testimonialsData[Data]}</h3>
                         </div>
                     ))
                 }

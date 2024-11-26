@@ -6,7 +6,7 @@ const Section1 = ({ background, bgPosition , headline, secondline, UC }) => {
     <div className="flex flex-col items-center relative">
       <img 
         src={background} 
-        className={`${bgPosition} object-cover z-0 w-full h-[85vh] lg:h-full lg:max-h-[88vh] 2xl:max-h-[85vh] `} 
+        className={`${bgPosition} object-cover z-0 w-full h-[70vh] lg:h-full lg:max-h-[88vh] 2xl:max-h-[85vh] `} 
         alt="Talent Avenue - Page's Head" 
       />
       <div className="flex flex-col items-center text-center absolute w-[90%] lg:w-[85%] max-w-[1350px] px-[3%] lg:px-[5%] py-[5%] lg:py-[2%] bottom-[7%] bg-[#303030AD] rounded-[20px]">

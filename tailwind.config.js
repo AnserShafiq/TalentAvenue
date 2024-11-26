@@ -17,7 +17,7 @@ module.exports = {
         'g-1':'#bc9a64',
       },
       translate:{
-        'header-drop-x': '-35%',
+        'header-drop-x': '0%',
         'header-drop-y': '2%',
       },
       margin:{

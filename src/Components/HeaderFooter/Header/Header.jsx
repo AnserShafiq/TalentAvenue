@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Logo from '../../../Images/HeaderFooter/Logo1.png';
-import { industriesWeSupport, ourSolutions, whyTalentAvenue } from '../MenuItems';
+import { employersData, industriesWeSupport, jobseekersData, whyTalentAvenue } from '../MenuItems';
 import { IoMenu as MobileIcon} from "react-icons/io5";
 import MobileSideMenu from './MobileSideMenu';
 import DropDown from './DropDown';
@@ -8,9 +8,9 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [wtaCheck, setWTACheck] = useState(false);
-    const [osCheck, setOSCheck] = useState(false);
+    const [empCheck, setEmpCheck] = useState(false);
     const [iwsCheck, setIWSCheck] = useState(false);
-    // const [findCheck, setFindCheck] = useState(false);
+    const [jsCheck, setJSCheck] = useState(false);
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
     const [ShowHeader, setShowHeader] = useState(true);
@@ -48,7 +48,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Menu Section */}
-        <div className='w-[60%] hidden lg:flex justify-center items-center space-x-4'>
+        <div className='w-[60%] hidden lg:flex justify-center items-center space-x-7'>
 
             {/* Why Talent Avenue */}
             <DropDown 
@@ -58,7 +58,7 @@ const Header = () => {
                         <>
                             <h2 className='text-g-1 text-[4rem] mb-3'>{whyTalentAvenue.Icon}</h2>
                             <h3 className='text-[1.3rem] capitalize tracking-wider font-[600] text-w-1'>{whyTalentAvenue.TaglineSimple}</h3>
-                            <h3 className='text-[1.5rem] capitalize tracking-wider font-[700] text-g-1 pb-0 border-b-[2px] border-g-1'>{whyTalentAvenue.TaglineUnderlined}</h3>
+                            <Link to={'/'} className='text-[1.5rem] capitalize tracking-wider font-[700] text-g-1 pb-0 border-b-[2px] border-g-1'>{whyTalentAvenue.TaglineUnderlined}</Link>
                         </>
                     ),
                     right:whyTalentAvenue.ChildPages,
@@ -66,22 +66,38 @@ const Header = () => {
                 isOpen={wtaCheck}
                 setIsOpen={setWTACheck}
             />
-            {/* Our Solutions */}
+            {/* Employers */}
             <DropDown 
-                title={ourSolutions.Name}
+                title={employersData.Name}
                 content={{
                     left: (
                         <>
-                            <h2 className='text-g-1 text-[4rem] mb-3'>{ourSolutions.Icon}</h2>
-                            <h3 className='text-[1.3rem] capitalize tracking-wider font-[600] text-w-1'>{ourSolutions.TaglineSimple}</h3>
-                            <h3 className='text-[1.5rem] capitalize tracking-wider font-[700] text-g-1 pb-0 border-b-[2px] border-g-1'>{ourSolutions.TaglineUnderlined}</h3>
+                            <h2 className='text-g-1 text-[4rem] mb-3'>{employersData.Icon}</h2>
+                            <h3 className='text-[1.3rem] capitalize tracking-wider font-[600] text-w-1'>{employersData.TaglineSimple}</h3>
+                            <Link to={'/'} className='text-[1.5rem] capitalize tracking-wider font-[700] text-g-1 pb-0 border-b-[2px] border-g-1'>{employersData.TaglineUnderlined}</Link>
                         </>
                     ),
-                    right:ourSolutions.ChildPages,
                 }}
-                isOpen={osCheck}
-                setIsOpen={setOSCheck}
+                isOpen={empCheck}
+                setIsOpen={setEmpCheck}
             />
+
+            {/* Job Seekers */}
+            <DropDown 
+                title={jobseekersData.Name}
+                content={{
+                    left: (
+                        <>
+                            <h2 className='text-g-1 text-[4rem] mb-3'>{jobseekersData.Icon}</h2>
+                            <h3 className='text-[1.3rem] capitalize tracking-wider font-[600] text-w-1'>{jobseekersData.TaglineSimple}</h3>
+                            <Link to={'/'} className='text-[1.5rem] capitalize tracking-wider font-[700] text-g-1 pb-0 border-b-[2px] border-g-1'>{jobseekersData.TaglineUnderlined}</Link>
+                        </>
+                    ),
+                }}
+                isOpen={jsCheck}
+                setIsOpen={setJSCheck}
+            />
+
             {/* Industries We Support */}
             <DropDown 
                 title={industriesWeSupport.Name}
@@ -93,7 +109,7 @@ const Header = () => {
                             <h3 className='text-[1.5rem] capitalize tracking-wider font-[700] text-g-1 pb-0 border-b-[2px] border-g-1'>{industriesWeSupport.TaglineUnderlined}</h3>
                         </>
                     ),
-                    right: industriesWeSupport.ChildPages,
+                    // right: industriesWeSupport.ChildPages,
                 }}
                 isOpen={iwsCheck}
                 setIsOpen={setIWSCheck}

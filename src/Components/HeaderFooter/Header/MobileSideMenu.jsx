@@ -2,18 +2,17 @@ import React, { useState, useEffect } from 'react';
 import Logo from '../../../Images/HeaderFooter/Logo1.png';
 import { IoIosCloseCircle as Close } from "react-icons/io";
 import { FaAngleDown as Down } from "react-icons/fa6";
-import { whyTalentAvenue, ourSolutions, industriesWeSupport } from '../MenuItems';
+import { whyTalentAvenue } from '../MenuItems';
 import { Link } from 'react-router-dom';
 
-
-const MenuSection = ({ menuName, subPages, isOpen, setIsOpen, link }) => {
+const MenuSection = ({ menuName, subPages, isOpen, onClick, link, last }) => {
     return (
-        <div onClick={() => setIsOpen(!isOpen)} className='relative group mb-3'>
+        <div onClick={onClick} className='relative group mb-3'>
             {
                 subPages ? (
                     <>
-                        <h3 className={`${isOpen ? 'text-g-1 border-g-1' : 'text-w-1 border-w-1'} text-[1.2rem] cursor-pointer flex justify-between items-center px-1 py-2 border-b-2 transition-colors ease-in-out duration-300`} >
-                            {menuName} 
+                        <h3 className={`${isOpen ? 'text-g-1 border-g-1' : 'text-w-1 border-w-1'} text-[1.2rem] cursor-pointer flex justify-between items-center px-1 py-2 border-b-2 transition-colors ease-in-out duration-300`}>
+                            {menuName}
                             <Down className={`transition-rotation duration-[0.7s] transform ${isOpen ? 'rotate-180' : 'rotate-0'}`} />
                         </h3>
                         <div className={`flex-col bg-[#00000022] relative ${isOpen ? 'flex' : 'hidden'} transition-display duration-[0.7s] ease-in-out`}>
@@ -30,29 +29,23 @@ const MenuSection = ({ menuName, subPages, isOpen, setIsOpen, link }) => {
                     </>
                 ) : (
                     <>
-                        <Link to={link} className={`${isOpen ? 'text-g-1' : 'text-w-1'} text-[1.2rem] cursor-pointer flex justify-between items-center px-1 py-2 transition-colors ease-in-out duration-300`} >
+                        <Link to={link} className={`${isOpen ? 'text-g-1 border-g-1' : 'text-w-1 border-w-1'} text-[1.2rem] cursor-pointer flex justify-between items-center px-1 py-2 ${!last ? 'border-b-2':''} transition-colors ease-in-out duration-300`}>
                             {menuName}
                         </Link>
                     </>
                 )
             }
         </div>
-    )
-}
+    );
+};
 
 const MobileSideMenu = ({ menuLogo, callMobileMenu, mobileMenuCalled }) => {
-    const [wtaCall, setWTACall] = useState(false);
-    const [osCall, setOSCall] = useState(false);
-    const [iwsCall, setIWSCall] = useState(false);
-    const [fcCall, setFCCall] = useState(false);
+    const [activeMenu, setActiveMenu] = useState(null); // Store the active menu name
 
     useEffect(() => {
         // Add or remove the `overflow-hidden` class on body based on `mobileMenuCalled`
-        
         if (mobileMenuCalled) {
-            
             document.body.classList.add('overflow-hidden');
-            
         } else {
             document.body.classList.remove('overflow-hidden');
         }
@@ -71,10 +64,37 @@ const MobileSideMenu = ({ menuLogo, callMobileMenu, mobileMenuCalled }) => {
                     <img src={Logo} className='w-[18rem]' alt='Talent avenue logo' />
                 </div>
                 <div className='flex flex-col px-6 w-full'>
-                    <MenuSection menuName={whyTalentAvenue.Name} subPages={whyTalentAvenue.ChildPages} isOpen={wtaCall} setIsOpen={setWTACall} />
-                    <MenuSection menuName={ourSolutions.Name} subPages={ourSolutions.ChildPages} isOpen={osCall} setIsOpen={setOSCall} />
-                    <MenuSection menuName={industriesWeSupport.Name} subPages={industriesWeSupport.ChildPages} isOpen={iwsCall} setIsOpen={setIWSCall} />
-                    <MenuSection menuName={'Find Candidates'} link={'/'} isOpen={fcCall} setIsOpen={setFCCall} />
+                    <MenuSection
+                        menuName={'Home'}
+                        link={'/'}
+                        isOpen={activeMenu === 'Home'}
+                        onClick={() => setActiveMenu(activeMenu === 'Home' ? null : 'WhyTalentAvenue')}
+                    />
+                    <MenuSection
+                        menuName={whyTalentAvenue.Name}
+                        subPages={whyTalentAvenue.ChildPages}
+                        isOpen={activeMenu === 'WhyTalentAvenue'}
+                        onClick={() => setActiveMenu(activeMenu === 'WhyTalentAvenue' ? null : 'WhyTalentAvenue')}
+                    />
+                    <MenuSection
+                        menuName={'Employers'}
+                        link={'/'}
+                        isOpen={activeMenu === 'Employers'}
+                        onClick={() => setActiveMenu(activeMenu === 'Employers' ? null : 'Employers')}
+                    />
+                    <MenuSection
+                        menuName={'Job Seeker'}
+                        link={'/'}
+                        isOpen={activeMenu === 'JobSeeker'}
+                        onClick={() => setActiveMenu(activeMenu === 'JobSeeker' ? null : 'JobSeeker')}
+                    />
+                    <MenuSection
+                        menuName={'Industries We Deals'}
+                        link={'/'}
+                        isOpen={activeMenu === 'IndustriesWeDeals'}
+                        onClick={() => setActiveMenu(activeMenu === 'IndustriesWeDeals' ? null : 'IndustriesWeDeals')}
+                        last={true}
+                    />
                 </div>
 
                 <div className='flex flex-col bottom-0 px-6 items-center'>
@@ -91,7 +111,7 @@ const MobileSideMenu = ({ menuLogo, callMobileMenu, mobileMenuCalled }) => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default MobileSideMenu;

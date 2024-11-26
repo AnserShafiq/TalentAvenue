@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import MainHead from '../../Components/SectionsHead/MainHead'
 import Insights from '../../Images/Icons/Ourtrainings2.png'
 import Nurture from '../../Images/Icons/Nurture.png'
@@ -9,7 +9,7 @@ import Hire from '../../Images/Icons/Hire.png'
 
 const PoweredByTech = () => {
     const MainHeadContent = {
-        title: 'Powered By Technology',
+        D_title: 'Powered By Technology',M_title: 'Powered By Tech',
         desc: 'At Talent Avenue, we specialize in unearthing and placing top-tier professionals to unlock your business’s fullest potential regardless of the industry you’re operating in. We are skilled at seamlessly overcoming any sector-specific hurdles when it comes to fulfilling all your staffing needs.'
     }
 
@@ -40,10 +40,21 @@ const PoweredByTech = () => {
             desc: 'We provide you with direct labour market intelligence and can advise you on the next best action for your business.'
         },
     ]
+    const [mobileCheck, setMobileView] = useState(false);
 
+    useEffect(() => {
+        if(window.innerWidth < 1000){
+            setMobileView(true);
+        }else{
+            setMobileView(false)
+        }
+    },[setMobileView])
     return (
     <div className='flex relative flex-col justify-center items-center my-sm w-[95%] lg:w-[80%] 2xl:w-[70%] h-[100%] mx-auto'>
-        <MainHead title={MainHeadContent.title} titleColor={'w-1'} description={MainHeadContent.desc} descriptionColor={'w-1'} />
+        
+        
+        
+        <MainHead title={mobileCheck ? (MainHeadContent.M_title):(MainHeadContent.D_title)} titleColor={'w-1'} description={MainHeadContent.desc} descriptionColor={'w-1'} />
         <div className='flex flex-col lg:grid lg:grid-cols-3 w-[80%] lg:w-full gap-y-10 lg:gap-y-8 lg:gap-x-8 my-5'>
             {
                 IconsDesc.map((ActiveIcon, index) => (

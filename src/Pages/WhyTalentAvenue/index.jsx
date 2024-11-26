@@ -4,8 +4,6 @@ import Bg from '../../Images/WhyTalentAvenue/wta1.jpg'
 import RecruitmentSols from '../CommonSections/RecruitmentSols'
 import ContactCard from '../../Components/Cards/ContactCard'
 import IntroVideo from '../CommonSections/IntroVideo'
-// import { Link } from 'react-router-dom'
-import { HashLink } from 'react-router-hash-link'
 import FnF from './Sections/W2'
 import GTJD from './Sections/W3'
 import Location from '../../Images/Home/location.png'
@@ -16,6 +14,7 @@ import Underlining from '../../Components/Underlining'
 import IndustriesIntro from '../CommonSections/IndustriesIntro'
 import PoweredByTech from '../CommonSections/PoweredByTech'
 import Testimonials from '../CommonSections/OurTestimonials'
+import PageSubMenu from '../../Components/PageMenu'
 
 const WhyTalentAvenue = () => {
 
@@ -25,7 +24,7 @@ const WhyTalentAvenue = () => {
         secondline:'Join us and build a future based on diversity, inclusion, and human potential',
     }
 
-    const PageMenu = [
+    const PageMenuData = [
         {
             title: 'Facts & Figures',
             link: './#facts&figures',
@@ -74,15 +73,8 @@ const WhyTalentAvenue = () => {
     return (
         <>
             <Section1 background={DataOne.background} bgPosition={'object-center'} headline={DataOne.headline} secondline={DataOne.secondline} UC={false}/>
-            <div className=' w-[80%] mx-auto my-[1%] hidden lg:flex flex-row justify-center items-center'>
-                {
-                    PageMenu.map((Menu, index) => (
-                        <div key={index} className={`flex justify-center items-center px-[4%] ${Menu.last ? 'border-r-2 border-transparent' : 'border-r-2 border-g-1'} `}>
-                            <HashLink key={Menu.title} to={Menu.link} scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}  className='text-g-1 font-[500] tracking-wide uppercase text-[1.1rem]'>{Menu.title}</HashLink>
-                        </div>
-                    ))
-                }
-            </div>
+            
+            <PageSubMenu menubody={PageMenuData} />
             
             <div id='facts&figures'/>
             <FnF />

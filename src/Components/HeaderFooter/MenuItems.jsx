@@ -10,7 +10,7 @@ export const MenuItems = [
 
 
 export const whyTalentAvenue = {
-    Name: 'Why Talent Avenue',
+    Name: 'About Us',
     Icon: <FaQuestion/>,
     TaglineSimple: 'Need knowledge about',
     TaglineUnderlined: 'Talent avenue?',
@@ -19,84 +19,33 @@ export const whyTalentAvenue = {
             ChildName: 'Why Talent Avenue',
             Link: '/why-talent-avenue',
         },{
-            ChildName: 'About Us',
-            Link: '/',
-        },{
             ChildName: 'How we work',
-            Link: '/',
+            Link: '/how-we-work',
         },{
             ChildName: "FAQ's",
-            Link: '/',
+            Link: '/faqs',
         },
     ]
 }
 
-export const ourSolutions = {
-    Name: 'Our Solutions',
-    Icon: <FaQuestion/>,
-    TaglineSimple: 'Gather some knowledge',
-    TaglineUnderlined: 'About our solutions?',
-    ChildPages: [
-        {
-            ChildName: 'Our Solutions',
-            Link: '/',
-        },{
-            ChildName: 'Contractual placements',
-            Link: '/',
-        },{
-            ChildName: 'Permanent placements',
-            Link: '/',
-        },{
-            ChildName: "Outsourcing",
-            Link: '/',
-        },{
-            ChildName: "Essentials for business",
-            Link: '/',
-        },{
-            ChildName: "Our trainings",
-            Link: '/',
-        },
-    ]
-}
 
 export const industriesWeSupport = {
-    Name: 'Industries we support',
+    Name: 'Industries we deal',
     Icon: <LuCrown/>,
     TaglineSimple: 'Have a look on',
     TaglineUnderlined: 'industries we deal?',
-    ChildPages: [
-        {
-            ChildName: 'industries we support',
-            Link: '/',
-        },{
-            ChildName: 'Accounting & finance',
-            Link: '/',
-        },{
-            ChildName: 'General management',
-            Link: '/',
-        },{
-            ChildName: "Office personal",
-            Link: '/',
-        },{
-            ChildName: "Human resources",
-            Link: '/',
-        },{
-            ChildName: "Sales & marketing",
-            Link: '/',
-        },{
-            ChildName: "Customer Services",
-            Link: '/',
-        },{
-            ChildName: "Operations & Supply Chain",
-            Link: '/',
-        },{
-            ChildName: "Engineering",
-            Link: '/',
-        },{
-            ChildName: "Information Technology",
-            Link: '/',
-        },
-    ]
+}
+export const employersData = {
+    Name: 'Employers',
+    Icon: <LuCrown/>,
+    TaglineSimple: 'Gather more info about',
+    TaglineUnderlined: 'Talent we provides!!',
+}
+export const jobseekersData = {
+    Name: 'Job Seekers',
+    Icon: <LuCrown/>,
+    TaglineSimple: 'Looking for Job options',
+    TaglineUnderlined: 'enrol to attract',
 }
 
 export const FooterPages = [
