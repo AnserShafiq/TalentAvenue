@@ -25,7 +25,7 @@ const Emp1 = () => {
         },
     ]
     return (
-    <div className='flex flex-col justify-center items-center my-[8%] lg:my-sm w-[95%] lg:w-[80%] 2xl:w-[75%] mx-auto'>
+    <div className='flex flex-col justify-center items-center my-[8%] lg:my-sm w-[95%] lg:w-[80%] 2xl:w-[71%] mx-auto'>
 
         <div className='flex flex-col justify-center w-full'>
             <MainHead title={SectionContent.title} titleColor={'w-1'} description={SectionContent.description} descriptionColor={'w-1'}/>

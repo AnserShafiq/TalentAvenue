@@ -18,7 +18,7 @@ const HWW2 = () => {
         'Direct access to Talent Avenue’s extensive global network.',
         'Full compliance management throughout onboarding and offboarding.',
         'Detailed reporting, analytics, and expert consultation customized to your industry’s specific needs.'
-      ]
+      ],position:'',
     },{
       name:'Onsite - Our team collaborate with you',
       desc:'Talent Avenue excels in delivering permanent placement services through direct hire recruitment solutions. We provide businesses of all sizes with streamlined hiring processes, offering:',
@@ -27,7 +27,7 @@ const HWW2 = () => {
         'Direct access to Talent Avenue’s extensive global network.',
         'Full compliance management throughout onboarding and offboarding.',
         'Detailed reporting, analytics, and expert consultation customized to your industry’s specific needs.'
-      ]
+      ],position:'left',
     },{
       name:'Managed Services Provider',
       desc:'Talent Avenue excels in delivering permanent placement services through direct hire recruitment solutions. We provide businesses of all sizes with streamlined hiring processes, offering:',
@@ -36,7 +36,7 @@ const HWW2 = () => {
         'Direct access to Talent Avenue’s extensive global network.',
         'Full compliance management throughout onboarding and offboarding.',
         'Detailed reporting, analytics, and expert consultation customized to your industry’s specific needs.'
-      ]
+      ],position:'',
     },
   ]
 
@@ -49,7 +49,7 @@ const HWW2 = () => {
                   <img className='w-full h-full rounded-[20px]' src={Model.img} alt={`${Model.name} - Pic`}/>
                 </div>
                 <div className={`w-full flex flex-col ${(index+1)%2===0 ? 'lg:pr-10':'lg:pl-10'} lg:w-[60%]`}>
-                  <div className='text-[1.5rem] lg:text-[2rem] font-bold uppercase mx-auto mt-4 text-center lg:text-start lg:mx-0 lg:mt-0 text-w-1'><Underlining bodytext={Model.name} textcolor={'w-1'} /></div>
+                  <div className='text-[1.5rem] lg:text-[2rem] font-bold uppercase mx-auto mt-4 text-center lg:text-start lg:mx-0 lg:mt-0 text-w-1'><Underlining bodytext={Model.name} textcolor={'w-1'} position={Model.position} /></div>
                   <h4 className='text-[1.2rem] leading-tight text-w-1 font-[400] capitalize mt-6 mb-2 text-center lg:text-start'>{Model.desc}</h4>
                   {
                     Model.points.map((Point, index) => (

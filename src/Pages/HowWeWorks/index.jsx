@@ -56,7 +56,7 @@ const HowWeWorks = () => {
 
         <div className='my-[5%]'>
             <ContactCard mainHead={ContactData.mainheading} mainDesc={ContactData.mainDesc} button={ContactData.button} buttonLink={ContactData.buttonLink} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
-            </div>
+        </div>
 
     </>
   )
