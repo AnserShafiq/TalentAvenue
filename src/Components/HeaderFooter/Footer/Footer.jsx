@@ -36,7 +36,7 @@ const Footer = () => {
             <Link className='text-[1.2rem] 2xl:text-[1.3rem] text-w-1 font-semibold capitalize tracking-wide hover:text-g-1 border-2 px-2 py-1 rounded-md border-transparent hover:border-g-1 w-fit' >Outsourcings</Link>
             </div>
             <div className='flex flex-col px-3 lg:px-5 py-4'>
-                <h3 className='text-[1.9rem] capitalize text-g-1 font-bold leading-tight tracking-wider border-b-2 border-g-1 w-fit mb-4 '>Follow Us:</h3>
+                <h3 className='text-[1.9rem] capitalize text-g-1 font-bold leading-tight tracking-wider border-b-2 border-g-1 w-fit mb-4 '>Follow Us</h3>
                 <div className='flex '>
                     <div className='mr-4 border-2 p-[0.35rem] rounded-[50%] cursor-pointer text-w-1 hover:text-g-1 hover:border-g-1'><Fb className='text-[1.7rem] '/></div>
                     <div className='mr-4 border-2 p-[0.35rem] rounded-[50%] cursor-pointer text-w-1 hover:text-g-1 hover:border-g-1'><Tw className='text-[1.7rem] '/></div>
