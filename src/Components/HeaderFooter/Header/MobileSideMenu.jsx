@@ -68,7 +68,7 @@ const MobileSideMenu = ({ menuLogo, callMobileMenu, mobileMenuCalled }) => {
                         menuName={'Home'}
                         link={'/'}
                         isOpen={activeMenu === 'Home'}
-                        onClick={() => setActiveMenu(activeMenu === 'Home' ? null : 'WhyTalentAvenue')}
+                        onClick={() => setActiveMenu(activeMenu === 'Home' ? null : 'Home')}
                     />
                     <MenuSection
                         menuName={whyTalentAvenue.Name}
@@ -78,19 +78,19 @@ const MobileSideMenu = ({ menuLogo, callMobileMenu, mobileMenuCalled }) => {
                     />
                     <MenuSection
                         menuName={'Employers'}
-                        link={'/'}
+                        link={'/employers'}
                         isOpen={activeMenu === 'Employers'}
                         onClick={() => setActiveMenu(activeMenu === 'Employers' ? null : 'Employers')}
                     />
                     <MenuSection
                         menuName={'Job Seeker'}
-                        link={'/'}
+                        link={'/job-seekers'}
                         isOpen={activeMenu === 'JobSeeker'}
                         onClick={() => setActiveMenu(activeMenu === 'JobSeeker' ? null : 'JobSeeker')}
                     />
                     <MenuSection
                         menuName={'Industries We Deals'}
-                        link={'/'}
+                        link={'/industries-we-deal'}
                         isOpen={activeMenu === 'IndustriesWeDeals'}
                         onClick={() => setActiveMenu(activeMenu === 'IndustriesWeDeals' ? null : 'IndustriesWeDeals')}
                         last={true}

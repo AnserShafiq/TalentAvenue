@@ -9,7 +9,7 @@ const DropDown = ({ title, content, isOpen, setIsOpen,link }) => {
         { 
             content ? (
                 <>
-                <h3 className={`${isOpen ? 'text-g-1 border-g-1' : 'text-w-1 border-transparent'} text-[1.05rem] 2xl:text-[1.15rem] uppercase cursor-pointer flex tracking-wider items-center px-1 py-[0.5%] my-2 border-b-2 transition-colors ease-in-out duration-300`}>{title} <Down className={`${content.right ? 'ml-2 ':'hidden ml-0'}`} /></h3>
+                <Link to={link} className={`${isOpen ? 'text-g-1 border-g-1' : 'text-w-1 border-transparent'} text-[1.05rem] 2xl:text-[1.15rem] uppercase cursor-pointer flex tracking-wider items-center px-1 py-[0.5%] my-2 border-b-2 transition-colors ease-in-out duration-300`}>{title} <Down className={`${content.right ? 'ml-2 ':'hidden ml-0'}`} /></Link>
                 <div className={`flex-row absolute bg-[var(--dropdown-bg)] translate-x-header-drop-x left-0 ${isOpen ? 'flex' : 'hidden'} shadow-lg rounded-md ${content.right ? 'w-[40rem]':'w-[20rem]'} h-[275px]`}>
             
                     <div className={`flex relative justify-center items-center h-full ${content.right ? 'w-[50%] max-w-[50%]' : 'w-[100%] max-w-[100%]'}`}>

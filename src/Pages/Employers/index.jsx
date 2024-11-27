@@ -10,6 +10,7 @@ import Countries from '../../Images/Home/Countries.png'
 import People from '../../Images/Home/People.png'
 import Handshake from '../../Images/Home/Handshake.png'
 import Underlining from '../../Components/Underlining'
+import { Link } from 'react-router-dom'
 const Employers = () => {
   
     const PageHead = {
@@ -22,7 +23,12 @@ const Employers = () => {
         {
             no:1,
             name:'Focused Needs Assessment',
-            line:'Understand your culture, technical needs, and role to find the right fit.',
+            line:(
+                <>
+                Understand your culture, technical needs, and role to <Link to={'/'} className='text-g-1 uppercase hover:underline font-bold' >find the right fit</Link>.
+                </>
+            ),
+            // line:'Understand your culture, technical needs, and role to find the right fit.',
         },{
             no:2,
             name:'Personalized Consultations',

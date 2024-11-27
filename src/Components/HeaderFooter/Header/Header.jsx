@@ -50,9 +50,10 @@ const Header = () => {
         {/* Desktop Menu Section */}
         <div className='w-[60%] hidden lg:flex justify-center items-center space-x-7'>
 
-            {/* Why Talent Avenue */}
+            {/* About Us */}
             <DropDown 
                 title={whyTalentAvenue.Name}
+                link={'/why-talent-avenue'}
                 content={{
                     left: (
                         <>
@@ -69,6 +70,7 @@ const Header = () => {
             {/* Employers */}
             <DropDown 
                 title={employersData.Name}
+                link={employersData.Link}
                 content={{
                     left: (
                         <>
@@ -85,6 +87,7 @@ const Header = () => {
             {/* Job Seekers */}
             <DropDown 
                 title={jobseekersData.Name}
+                link={jobseekersData.Link}
                 content={{
                     left: (
                         <>
@@ -101,6 +104,7 @@ const Header = () => {
             {/* Industries We Support */}
             <DropDown 
                 title={industriesWeSupport.Name}
+                link={industriesWeSupport.Link}
                 content={{
                     left:(
                         <>
