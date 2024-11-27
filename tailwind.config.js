@@ -35,6 +35,9 @@ module.exports = {
       },
       screens:{
         '2xl':'1600px',
+      },
+      backgroundImage:{
+        'ContactCard':"url('/src/Images/gradientback.png')",
       }
     },
   },

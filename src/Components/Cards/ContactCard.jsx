@@ -10,7 +10,7 @@ const ContactCard = ({mainHead, mainDesc, button, buttonLink, subHead, subOption
             <p className='tracking-normal text-mp-m lg:text-[1.4rem] lg:my-3 font-[400] text-w-1 leading-tight'>{mainDesc}</p>
             <Link className='bg-g-1 hover:bg-w-1 text-w-1 hover:text-g-1 font-[500] text-[1.2rem] lg:text-[1.4rem] px-4 py-2 w-fit rounded-[10px] mt-4' to={buttonLink}>{button}</Link>
         </div>
-        <div className='flex flex-wrap w-full lg:w-[33%] capitalize bg-g-1 px-5 py-6 rounded-[20px]' >
+        <div className='flex flex-wrap w-full lg:w-[33%] capitalize bg-cover bg-center bg-ContactCard px-5 py-6 rounded-[20px]' >
             <h2 className='flex flex-wrap text-mh-m lg:text-mh-d font-[400] text-w-1 leading-tight'>{subHead}</h2>
             <div className='flex flex-col mt-3'>
                 {

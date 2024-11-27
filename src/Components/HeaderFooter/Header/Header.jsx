@@ -34,7 +34,7 @@ const Header = () => {
     })
 
     return (
-    <div className={`flex flex-row bg-[#000000] px-X-Header py-Y-Header sticky left-0 top-0 z-10 w-[100%] transition-transform ease-in-out duration-500 shadow-sm shadow-[#bd996055] transform ${ShowHeader ? 'translate-y-0':'-translate-y-full'}`}>
+    <div className={`flex flex-wrap flex-row bg-[#000000] px-X-Header py-Y-Header sticky left-0 top-0 z-10 w-[100%] transition-transform ease-in-out duration-500 shadow-sm shadow-[#bd996055] transform ${ShowHeader ? 'translate-y-0':'-translate-y-full'}`}>
 
         {/* Mobile Menu */}
         <div className='w-[25%] flex lg:w-[0%] lg:hidden justify-start items-center'>
@@ -124,11 +124,12 @@ const Header = () => {
 
         {/* Logo Section */}
         <div className='hidden lg:flex justify-end items-center lg:w-[20%]'>
-            <Link className='text-[1.05rem] 2xl:text-[1.2rem] uppercase px-3 py-[5px] bg-[#A6824B] font-semibold rounded-xl text-w-1 hover:text-g-1 hover:bg-w-1' to={'/'}>Contact Us</Link>
+            <Link className='text-[1.05rem] relative 2xl:text-[1.2rem] uppercase px-1 hover:px-3 hover:py-1 border-b-[1.5px] border-g-1 bg-transparent leading-tight font-semibold text-g-1 hover:text-w-1 hover:border-[1.5px] hover:rounded-[20px] hover:border-w-1 transition-all duration-400 ease-in-out' to={'/'}>Contact Us</Link>
         </div>
 
     </div>
     );
 };
+
 
 export default Header;
