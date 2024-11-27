@@ -12,7 +12,7 @@ const RecruitmentCard = ({type,mobileView, title, targetIcon,desc,link }) => {
         <div className=''>
             {
                 type=== 'Main' ? (
-                    <div className={`h-[57vh] lg:h-[66vh] 2xl:h-[50vh] my-4 lg:my-0 ${mobileView ? 'flex flex-col': 'hidden lg:flex flex-col'} relative shadow-xl shadow-[#bc9a640f] bg-[#0000007f] rounded-[25px] rounded-[25px]`}>
+                    <div className={`h-[57vh] lg:h-[66vh] 2xl:h-[50vh] my-4 lg:my-0 ${mobileView ? 'flex flex-col': 'hidden lg:flex flex-col'} relative shadow-xl shadow-[#bc9a640f] bg-[#0000007f] rounded-[25px]`}>
                         <img className='w-full h-[100%] rounded-[25px] object-center' src={targetIcon} alt='Recruitment Solutions By Talent Avenue' />
                     </div>
                 ) :(

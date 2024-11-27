@@ -6,6 +6,9 @@ import Header from './Components/HeaderFooter/Header/Header';
 import Footer from './Components/HeaderFooter/Footer/Footer';
 import FAQs from './Pages/FAQs/index.jsx';
 import HowWeWorks from './Pages/HowWeWorks/index.jsx';
+import Employers from './Pages/Employers/index.jsx';
+import JobSeekers from './Pages/JobSeekers/index.jsx';
+import OurIndustries from './Pages/Industries/index.jsx';
 
 
 const AppBody = () =>{
@@ -18,6 +21,9 @@ const AppBody = () =>{
           <Route path='/why-talent-avenue' element={<WhyTalentAvenue />} />
           <Route path='/faqs' element={<FAQs />} />
           <Route path='/how-we-work' element={<HowWeWorks />}/>
+          <Route path='/employers' element={<Employers />} />
+          <Route path='/job-seekers' element={<JobSeekers />} />
+          <Route path='/industries-we-deal' element={<OurIndustries />} />
         </Routes>
       </div>
       <Footer />

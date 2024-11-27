@@ -32,18 +32,20 @@ export const whyTalentAvenue = {
 export const industriesWeSupport = {
     Name: 'Industries we deal',
     Icon: <LuCrown/>,
+    Link:'/industries-we-deal',
     TaglineSimple: 'Have a look on',
     TaglineUnderlined: 'industries we deal?',
 }
 export const employersData = {
     Name: 'Employers',
-    Icon: <LuCrown/>,
+    Icon: <LuCrown/>,Link:'/employers',
     TaglineSimple: 'Gather more info about',
     TaglineUnderlined: 'Talent we provides!!',
 }
 export const jobseekersData = {
     Name: 'Job Seekers',
     Icon: <LuCrown/>,
+    Link:'/job-seekers',
     TaglineSimple: 'Looking for Job options',
     TaglineUnderlined: 'enrol to attract',
 }

@@ -74,7 +74,7 @@ const Header = () => {
                         <>
                             <h2 className='text-g-1 text-[4rem] mb-3'>{employersData.Icon}</h2>
                             <h3 className='text-[1.3rem] capitalize tracking-wider font-[600] text-w-1'>{employersData.TaglineSimple}</h3>
-                            <Link to={'/'} className='text-[1.5rem] capitalize tracking-wider font-[700] text-g-1 pb-0 border-b-[2px] border-g-1'>{employersData.TaglineUnderlined}</Link>
+                            <Link to={employersData.Link} className='text-[1.5rem] capitalize tracking-wider font-[700] text-g-1 pb-0 border-b-[2px] border-g-1'>{employersData.TaglineUnderlined}</Link>
                         </>
                     ),
                 }}
@@ -90,7 +90,7 @@ const Header = () => {
                         <>
                             <h2 className='text-g-1 text-[4rem] mb-3'>{jobseekersData.Icon}</h2>
                             <h3 className='text-[1.3rem] capitalize tracking-wider font-[600] text-w-1'>{jobseekersData.TaglineSimple}</h3>
-                            <Link to={'/'} className='text-[1.5rem] capitalize tracking-wider font-[700] text-g-1 pb-0 border-b-[2px] border-g-1'>{jobseekersData.TaglineUnderlined}</Link>
+                            <Link to={jobseekersData.Link} className='text-[1.5rem] capitalize tracking-wider font-[700] text-g-1 pb-0 border-b-[2px] border-g-1'>{jobseekersData.TaglineUnderlined}</Link>
                         </>
                     ),
                 }}
@@ -106,7 +106,7 @@ const Header = () => {
                         <>
                             <h2 className='text-g-1 text-[4rem] mb-3'>{industriesWeSupport.Icon}</h2>
                             <h3 className='text-[1.3rem] capitalize tracking-wider font-[600] text-w-1'>{industriesWeSupport.TaglineSimple}</h3>
-                            <h3 className='text-[1.5rem] capitalize tracking-wider font-[700] text-g-1 pb-0 border-b-[2px] border-g-1'>{industriesWeSupport.TaglineUnderlined}</h3>
+                            <Link to={industriesWeSupport.Link} className='text-[1.5rem] capitalize tracking-wider font-[700] text-g-1 pb-0 border-b-[2px] border-g-1'>{industriesWeSupport.TaglineUnderlined}</Link>
                         </>
                     ),
                     // right: industriesWeSupport.ChildPages,
