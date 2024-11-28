@@ -124,7 +124,7 @@ const Header = () => {
 
         {/* Logo Section */}
         <div className='hidden lg:flex justify-end items-center lg:w-[20%]'>
-            <Link className='text-[1.05rem] relative 2xl:text-[1.2rem] uppercase px-1 hover:px-3 hover:py-1 border-b-[1.5px] border-g-1 bg-transparent leading-tight font-semibold text-g-1 hover:text-w-1 hover:border-[1.5px] hover:rounded-[20px] hover:border-w-1 transition-all duration-400 ease-in-out' to={'/'}>Contact Us</Link>
+            <Link className='text-[1.05rem] relative 2xl:text-[1.2rem] uppercase px-1 hover:px-3 hover:py-1 border-b-[1.5px] border-g-1 bg-transparent leading-tight font-semibold text-g-1 hover:text-w-1 hover:border-[1.5px] hover:rounded-[20px] hover:border-w-1 transform hover:scale-[0.9c] transition-all duration-500 ease-in-out ' to={'/'}>Contact Us</Link>
         </div>
 
     </div>

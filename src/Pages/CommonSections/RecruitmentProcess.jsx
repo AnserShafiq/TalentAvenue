@@ -1,5 +1,5 @@
 import React from 'react'
-import MainHead from '../../../Components/SectionsHead/MainHead'
+import MainHead from '../../Components/SectionsHead/MainHead'
 
 const RecruitmentProcess = ({Heading,Process}) => {
   return (

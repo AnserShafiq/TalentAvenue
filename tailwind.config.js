@@ -38,6 +38,7 @@ module.exports = {
       },
       backgroundImage:{
         'ContactCard':"url('/src/Images/gradientback.png')",
+        'JsCards':"url('/src/Images/Jobseekers/cards.png')",
       }
     },
   },

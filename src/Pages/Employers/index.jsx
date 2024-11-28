@@ -1,9 +1,10 @@
 import React from 'react'
 import Section1 from '../CommonSections/Section1'
-import HeadBg from '../../Images/Employers/emp1.jpg'
+import HeadBg_D from '../../Images/Employers/emp1.jpg'
+import HeadBg_M from '../../Images/Employers/emp3.jpg'
 import Emp1 from './Sections/Emp1'
 import Emp2 from './Sections/Emp2'
-import RecruitmentProcess from './Sections/RecruitmentProcess'
+import RecruitmentProcess from '../CommonSections/RecruitmentProcess'
 import ContactCard from '../../Components/Cards/ContactCard'
 import Location from '../../Images/Home/location.png'
 import Countries from '../../Images/Home/Countries.png'
@@ -14,9 +15,9 @@ import { Link } from 'react-router-dom'
 const Employers = () => {
   
     const PageHead = {
-        bg: HeadBg,
-        title: 'Inclusion at the Heart of Success',
-        description: 'Diversity & inclusion are vital for success. Talent Avenue helps build diverse teams that foster innovation, improve decision-making, & boost productivity while creating an engaging & positive culture.',
+        bg: window.innerWidth > 1000 ? HeadBg_D : HeadBg_M,
+        title: 'Transformed Strategies for Success',
+        description: 'We provide detailed analysis and actionable insights to optimize your processes, enhance efficiency, and achieve impactful outcomes that drive long-term success.',
     }
 
     const EmploymentProcess =[
@@ -25,10 +26,9 @@ const Employers = () => {
             name:'Focused Needs Assessment',
             line:(
                 <>
-                Understand your culture, technical needs, and role to <Link to={'/'} className='text-g-1 uppercase hover:underline font-bold' >find the right fit</Link>.
+                Understand your culture, technical needs, and role to <Link to={'/employers'} className='text-g-1 capitalize hover:underline font-bold' >find the right fit</Link>.
                 </>
             ),
-            // line:'Understand your culture, technical needs, and role to find the right fit.',
         },{
             no:2,
             name:'Personalized Consultations',
