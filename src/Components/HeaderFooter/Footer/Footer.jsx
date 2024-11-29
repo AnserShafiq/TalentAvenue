@@ -30,10 +30,10 @@ const Footer = () => {
                 <Link className='text-[1.2rem] text-w-1 font-semibold capitalize tracking-wide hover:text-g-1 border-2 px-2 py-1 rounded-md border-transparent hover:border-g-1 w-fit' >For hunting talent?</Link>
             </div>
             <div className='flex flex-col px-3 lg:px-5 py-4'>
-            <h3 className='text-[1.9rem] capitalize text-g-1 font-bold leading-tight tracking-wider border-b-2 border-g-1 w-fit mb-4 '>Contracts we deal</h3>
-            <Link className='text-[1.2rem] 2xl:text-[1.3rem] text-w-1 font-semibold capitalize tracking-wide hover:text-g-1 border-2 px-2 py-1 rounded-md border-transparent hover:border-g-1 w-fit' >Contractual Placements</Link>
-            <Link className='text-[1.2rem] 2xl:text-[1.3rem] text-w-1 font-semibold capitalize tracking-wide hover:text-g-1 border-2 px-2 py-1 rounded-md border-transparent hover:border-g-1 w-fit' >Permanents Placements</Link>
-            <Link className='text-[1.2rem] 2xl:text-[1.3rem] text-w-1 font-semibold capitalize tracking-wide hover:text-g-1 border-2 px-2 py-1 rounded-md border-transparent hover:border-g-1 w-fit' >Outsourcings</Link>
+            <h3 className='text-[1.9rem] capitalize text-g-1 font-bold leading-tight tracking-wider border-b-2 border-g-1 w-fit mb-4 '>Industries we deal</h3>
+            <h3 className='text-[1.2rem] 2xl:text-[1.3rem] text-w-1 font-semibold capitalize tracking-wide border-2 px-2 py-1 rounded-md border-transparent w-fit' >Information Technology</h3>
+            <h3 className='text-[1.2rem] 2xl:text-[1.3rem] text-w-1 font-semibold capitalize tracking-wide border-2 px-2 py-1 rounded-md border-transparent w-fit' >Healtcare</h3>
+            <Link to={'/industries-we-deal'} className='text-[1.2rem] 2xl:text-[1.3rem] text-w-1 font-semibold capitalize tracking-wide hover:text-g-1 border-2 px-2 py-1 rounded-md border-transparent hover:border-g-1 w-fit' >To Explore All</Link>
             </div>
             <div className='flex flex-col px-3 lg:px-5 py-4'>
                 <h3 className='text-[1.9rem] capitalize text-g-1 font-bold leading-tight tracking-wider border-b-2 border-g-1 w-fit mb-4 '>Follow Us</h3>

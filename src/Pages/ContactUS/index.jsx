@@ -2,6 +2,7 @@ import React from 'react'
 import Section1 from '../CommonSections/Section1'
 import Bg from '../../Images/ContactUs/CU1.jpg'
 import CU1 from './Sections/CU1'
+import CU2 from './Sections/CU2'
 const ContactUs = () => {
 
     const HeadContent = {
@@ -14,6 +15,7 @@ const ContactUs = () => {
     <div>
         <Section1 headline={HeadContent.headline} secondline={HeadContent.secondline} background={HeadContent.bg} />
         <CU1 />
+        <CU2 />
     </div>
   )
 }
