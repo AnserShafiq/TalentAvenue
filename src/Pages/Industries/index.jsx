@@ -42,7 +42,7 @@ const OurIndustries = () => {
   const PageHead = {
     bg: Ind1,
     headline: 'Revolutionizing Staffing Excellence',
-    secondline : 'Our pioneering approach to staffing reshapes the industry, ensuring unparalleled dedication to the needs of clients and candidates alike. Backed by years of expertise, we excel at aligning elite talent with premier organizations to achieve lasting success.',
+    secondline : 'Our innovative staffing approach redefines the industry, delivering exceptional dedication to clients & candidates. we connect top talent to leading organizations for lasting success.',
   }
   return (
     <div>
