@@ -1,5 +1,7 @@
 import { FaQuestion } from "react-icons/fa";
-import { LuCrown } from "react-icons/lu";
+import { PiBuildingsFill } from "react-icons/pi";
+import { FaHelmetSafety } from "react-icons/fa6";
+import { IoBriefcase } from "react-icons/io5";
 
 export const MenuItems = [
     {
@@ -31,20 +33,20 @@ export const whyTalentAvenue = {
 
 export const industriesWeSupport = {
     Name: 'Industries we deal',
-    Icon: <LuCrown/>,
+    Icon: <PiBuildingsFill/>,
     Link:'/industries-we-deal',
     TaglineSimple: 'Have a look on',
     TaglineUnderlined: 'industries we deal?',
 }
 export const employersData = {
     Name: 'Employers',
-    Icon: <LuCrown/>,Link:'/employers',
+    Icon: <IoBriefcase/>,Link:'/employers',
     TaglineSimple: 'Gather more info about',
     TaglineUnderlined: 'Talent we provides!!',
 }
 export const jobseekersData = {
     Name: 'Job Seekers',
-    Icon: <LuCrown/>,
+    Icon: <FaHelmetSafety/>,
     Link:'/job-seekers',
     TaglineSimple: 'Looking for Job options',
     TaglineUnderlined: 'enrol to attract',
