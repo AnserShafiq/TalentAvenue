@@ -15,6 +15,7 @@ module.exports = {
       colors:{
         'w-1':'#e5e5e5',
         'g-1':'#bc9a64',
+        'transparent-black-70':'#000000af',
       },
       translate:{
         'header-drop-x': '0%',
