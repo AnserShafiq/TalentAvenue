@@ -17,11 +17,23 @@ import ReactLoading from 'react-loading';
 
 const AppBody = () =>{
 
+  
 
   const location= useLocation();
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    const excludeLoadingPaths = [
+      '/privacy-policy/',
+      '/security-phishing/',
+      '/cookies-policy/',
+      '/terms-of-use/',
+    ];
+    if(excludeLoadingPaths.includes(location.pathname)){
+      setLoading(false)
+      return;
+    }
+
     setLoading(true)
     const timer = setTimeout(()=>{
       setLoading(false)
