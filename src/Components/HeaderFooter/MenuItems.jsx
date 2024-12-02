@@ -55,18 +55,18 @@ export const jobseekersData = {
 export const FooterPages = [
     {
         Name: 'About Us',
-        Link: '/',
+        Link: '/why-talent-avenue',
     },{
         Name: 'Privacy Policy',
-        Link: '/',
+        Link: '/privacy-policy',
     },{
         Name: 'Security & Phishing',
-        Link: '/',
+        Link: '/security-phishing',
     },{
         Name: 'Cookies Policy',
-        Link: '/',
+        Link: '/cookies-policy',
     },{
         Name: 'Terms Of Use',
-        Link: '/',
+        Link: '/terms-of-use',
     },
 ]

@@ -39,7 +39,7 @@ const MenuSection = ({ menuName, subPages, isOpen, onClick, link, last }) => {
     );
 };
 
-const MobileSideMenu = ({ menuLogo, callMobileMenu, mobileMenuCalled }) => {
+const MobileSideMenu = ({ callMobileMenu, mobileMenuCalled }) => {
     const [activeMenu, setActiveMenu] = useState(null); // Store the active menu name
 
     useEffect(() => {
@@ -59,11 +59,11 @@ const MobileSideMenu = ({ menuLogo, callMobileMenu, mobileMenuCalled }) => {
     return (
         <div className={`flex fixed left-0 top-0 z-[999] w-[100vw] min-h-[100vh] h-auto overflow-auto bg-[#00000044] transition-all ease-in-out duration-[0.7s] transform ${mobileMenuCalled ? 'translate-x-0' : '-translate-x-full'}`} id='SideMenu'>
             <Close className='absolute text-w-1 text-[2rem] top-4 right-4' onClick={() => callMobileMenu(false)} />
-            <div className={`flex flex-col justify-between bg-[#262626] w-[85%] max-h-[100vh] overflow-y-auto py-8 transition-all ease-in-out duration-[1s] transform ${mobileMenuCalled ? 'translate-x-0' : '-translate-x-full'}`}>
-                <div className='flex relative flex-col justify-center items-center'>
-                    <img src={Logo} className='w-[18rem]' alt='Talent avenue logo' />
+            <div className={`flex flex-col relative bg-[#262626] w-[85%] max-h-[100vh] overflow-y-auto py-8 transition-all ease-in-out duration-[1s] transform ${mobileMenuCalled ? 'translate-x-0' : '-translate-x-full'}`}>
+                <div className='flex relative flex-col justify-center items-center h-[20%]'>
+                    <img src={Logo} className='w-[16rem]' alt='Talent avenue logo' />
                 </div>
-                <div className='flex flex-col px-6 w-full'>
+                <div className='h-[60%] pt-4 flex flex-col px-6 w-full sticky'>
                     <MenuSection
                         menuName={'Home'}
                         link={'/'}
@@ -93,11 +93,17 @@ const MobileSideMenu = ({ menuLogo, callMobileMenu, mobileMenuCalled }) => {
                         link={'/industries-we-deal'}
                         isOpen={activeMenu === 'IndustriesWeDeals'}
                         onClick={() => setActiveMenu(activeMenu === 'IndustriesWeDeals' ? null : 'IndustriesWeDeals')}
+                    />
+                    <MenuSection
+                        menuName={'Contact Us'}
+                        link={'/contact-us'}
+                        isOpen={activeMenu === 'ContactUs'}
+                        onClick={() => setActiveMenu(activeMenu === 'ContactUs' ? null : 'ContactUs')}
                         last={true}
                     />
                 </div>
 
-                <div className='flex flex-col bottom-0 px-6 items-center'>
+                <div className='flex h-[20%] flex-col bottom-0 px-6 items-center'>
                     <Link className='text-[1.1rem] text-g-1 border-b-2 border-g-1 cursor-pointer font-bold tracking-wider leading-tight my-2' path='/'>
                         Looking For A Job?
                     </Link>

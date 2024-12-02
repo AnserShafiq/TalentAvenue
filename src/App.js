@@ -10,6 +10,8 @@ import Employers from './Pages/Employers/index.jsx';
 import JobSeekers from './Pages/JobSeekers/index.jsx';
 import OurIndustries from './Pages/Industries/index.jsx';
 import ContactUs from './Pages/ContactUS/index.jsx';
+import { CookiesPolicy, PrivacyPolicy, SecurityPhishing, TermsOfUse } from './Pages/ExtraPages/ExportPage.jsx';
+
 
 
 const AppBody = () =>{
@@ -26,6 +28,10 @@ const AppBody = () =>{
           <Route path='/job-seekers' element={<JobSeekers />} />
           <Route path='/industries-we-deal' element={<OurIndustries />} />
           <Route path='/contact-us' element={<ContactUs />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy />}/>
+          <Route path='/security-phishing' element={<SecurityPhishing />}/>
+          <Route path='/cookies-policy' element={<CookiesPolicy />}/>
+          <Route path='/terms-of-use' element={<TermsOfUse />}/>
         </Routes>
       </div>
       <Footer />
