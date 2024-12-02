@@ -1,5 +1,5 @@
-import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './Pages/Home/index.jsx';
 import WhyTalentAvenue from './Pages/WhyTalentAvenue/index.jsx';
 import Header from './Components/HeaderFooter/Header/Header';
@@ -11,10 +11,33 @@ import JobSeekers from './Pages/JobSeekers/index.jsx';
 import OurIndustries from './Pages/Industries/index.jsx';
 import ContactUs from './Pages/ContactUS/index.jsx';
 import { CookiesPolicy, PrivacyPolicy, SecurityPhishing, TermsOfUse } from './Pages/ExtraPages/ExportPage.jsx';
+import ReactLoading from 'react-loading';
 
 
 
 const AppBody = () =>{
+
+
+  const location= useLocation();
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setLoading(true)
+    const timer = setTimeout(()=>{
+      setLoading(false)
+    },3000)
+    return () => clearTimeout(timer);
+  },[location])
+
+  if(loading) return(
+    <div className='h-screen w-screen flex justify-center flex-col items-center text-center bg-[#0000007f]'>
+      <ReactLoading type='spinningBubbles' color='#bc9a64' height={5+'rem'} />
+      <h3 className='text-2xl lg:text-3xl tracking-wide font-[600] text-g-1'>
+        Loading...
+      </h3>
+    </div>
+  )
+
   return (
     <div>
       <Header />
