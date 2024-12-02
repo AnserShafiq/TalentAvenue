@@ -15,39 +15,48 @@ const IndustriesList = () => {
   const OurIndustries = [
     {
       Name: 'Information Technology',
-      Statement: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis cum quaerat sapiente veritatis, aliquid quisquam aut? Enim consectetur accusamus ipsa at maxime quisquam quaerat sed. Earum consequuntur harum numquam cupiditate.',
+      JobTypes: 'Database Manager, Project Manager, Systems Analyst, IT Coordination, Full Stack Developer and Many more.',
+      Statement: 'Identifying tech-savvy professionals who align with industry trends and meet the specific technological demands of organizations.',
       Image: Img1,
     },{
       Name: 'Healthcare',
-      Statement: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis cum quaerat sapiente veritatis, aliquid quisquam aut? Enim consectetur accusamus ipsa at maxime quisquam quaerat sed. Earum consequuntur harum numquam cupiditate.',
+      JobTypes: 'Healthcare Administrator, Physical Therapists, Pharmacists, Laboratory Technician, Physician, and Many more.',
+      Statement: 'Connecting healthcare professionals with organizations that prioritize patient care and regulatory compliance.',
       Image: Img2,
     },{
-      Name: 'Finance',
-      Statement: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis cum quaerat sapiente veritatis, aliquid quisquam aut? Enim consectetur accusamus ipsa at maxime quisquam quaerat sed. Earum consequuntur harum numquam cupiditate.',
+      Name: 'Accounting & Finance',
+      JobTypes: 'Director of Finance, Assistant Controller, Audit Manager, Payroll Clerk, Business Analyst, Tax Manager, and Many more.',
+      Statement: 'Sourcing candidates with a keen understanding of financial regulations, risk management, and strategic planning.',
       Image: Img3,
     },{
       Name: 'Manufacturing',
-      Statement: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis cum quaerat sapiente veritatis, aliquid quisquam aut? Enim consectetur accusamus ipsa at maxime quisquam quaerat sed. Earum consequuntur harum numquam cupiditate.',
+      JobTypes: 'Production Supervisor, Quality Control Inspector, CNC Machine Operator, Maintenance Technician, Forklift Operator and Many more.',
+      Statement: 'Finding skilled workers who can ensure quality production and meet operational goals within the manufacturing sector.',
       Image: Img4,
     },{
       Name: 'Retail',
-      Statement: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis cum quaerat sapiente veritatis, aliquid quisquam aut? Enim consectetur accusamus ipsa at maxime quisquam quaerat sed. Earum consequuntur harum numquam cupiditate.',
+      JobTypes: 'Sales Associate, Store Manager, Cashier, Merchandiser, Inventory Specialist, Customer Service Representative, and Many more.',
+      Statement: 'Helping retailers build a workforce that enhances customer experience and drives sales in a competitive market.',
       Image: Img5,
     },{
       Name: 'Engineering',
-      Statement: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis cum quaerat sapiente veritatis, aliquid quisquam aut? Enim consectetur accusamus ipsa at maxime quisquam quaerat sed. Earum consequuntur harum numquam cupiditate.',
+      JobTypes: 'Chemican Engineer, Automation & Controls, General Manager, Plant Manager, CAD Technologist, Marine Engineer, and Many more.',
+      Statement: 'Providing engineering firms with professionals who possess technical expertise and the ability to meet project specifications.',
       Image: Img6,
     },{
       Name: 'Construction',
-      Statement: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis cum quaerat sapiente veritatis, aliquid quisquam aut? Enim consectetur accusamus ipsa at maxime quisquam quaerat sed. Earum consequuntur harum numquam cupiditate.',
+      JobTypes: 'Construction Laborer, Site Supervisor, Electrician, Carpenter, Plumber, Civil Engineer, Safety Office, Quantity Surveyor, and Many more',
+      Statement: 'Matching construction firms with workers who meet project deadlines while adhering to safety and compliance standards.',
       Image: Img7,
     },{
       Name: 'Marketing',
-      Statement: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis cum quaerat sapiente veritatis, aliquid quisquam aut? Enim consectetur accusamus ipsa at maxime quisquam quaerat sed. Earum consequuntur harum numquam cupiditate.',
+      JobTypes: 'Brand Manager, Project Manager, Communications, Manager, Director of Communities, Marketing Coordinator, Marketing Manager, and Many more.',
+      Statement: 'Delivering marketing talent with the creativity and strategic thinking required to elevate brand presence and engagement.',
       Image: Img8,
     },
   ]
-
+  
+  
   const MainHeadContent = {
     Head: 'Industries we cover',
     Desc: 'we provide tailored direct hire recruitment services to industries across various sectors. Our focus is on connecting businesses with permanent employees who possess the skills and cultural alignment needed for success. By deeply understanding each industry’s unique requirements, we ensure seamless and effective talent placement.'

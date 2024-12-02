@@ -23,9 +23,10 @@ const IndustryFlipCard = ({ target }) => {
         src={target.Image}
         alt={`${target.Name} - Pic`}
       />
-      <div className="absolute w-full h-full top-0 left-0 flex flex-col px-6 text-center items-center justify-center bg-black bg-opacity-50 rounded-[20px]">
+      <div className="absolute w-full h-full top-0 left-0 flex flex-col px-6 py-8 text-start items-start justify-start bg-black bg-opacity-80 rounded-[20px]">
         <h3 className="text-g-1 text-[1.5rem] font-bold tracking-wide uppercase">{target.Name}</h3>
-        <p className='text-w-1 text-[1.1rem] lg:text-[1.3rem] font-normal leading-tight'>{target.Statement}</p>
+        <p className='text-w-1 text-[1.1rem] lg:text-[1.3rem] font-[300]  leading-tight mb-2'> <b className='font-semibold'>Job Types:</b> {target.JobTypes}</p>
+        <p className='text-w-1 text-[1.1rem] lg:text-[1.3rem] font-[300] leading-tight'> <b className='font-semibold'>Focus:</b> {target.Statement}</p>
         <Link className='text-g-1 hover:text-w-1 font-[500] text-[1.3rem] px-4 py-1 rounded-xl border-2 border-g-1 hover:border-w-1 bg-[#000000cf] hover:bg-g-1 mt-4' to={'/'}>To Apply</Link>
       </div>
     </div>

@@ -27,13 +27,26 @@ const Home = () => {
     )
 
   const ContactData = {
-    mainheading: (
-      <>
-        Want to see how <span className='px-0 py-0 lg:px-2 font-semibold'> <Underlining bodytext={'Talent Avenue'} textcolor={'w-1'}/> </span>serves it's clients?
-      </>
-    ),
-    mainDesc: "No matter the size of your hiring needs, we’ve got you covered – From Temporary Staffing to direct hires, we're ready to assist you.",
-    button: 'Contact Us Now',
+    mainheading: [
+      (
+        <>
+          Want to see how <span className='px-0 py-0 lg:px-2 font-semibold'> <Underlining bodytext={'Talent Avenue'} textcolor={'w-1'}/> </span>serves it's clients?
+        </>
+      ),
+      (
+        <>
+          Curious about how <span className='px-0 py-0 lg:px-2 font-semibold'> <Underlining bodytext={'Talent Avenue'} textcolor={'w-1'}/> </span> meets client needs?
+        </>
+      )
+    ],
+    mainDesc: [
+      "From connecting talented individuals to rewarding careers to helping employers find exceptional permanent hires, we provide expert support every step of the way.",
+      "Whether you're seeking the perfect opportunity or the ideal candidate, our permanent placement solutions are designed to meet your unique needs with precision and care."
+    ],
+    button: [
+      'Contact Us Now',
+      'Connect With Us'
+    ],
     buttonLink: '/',
     subHead: 'Your advantages with talent avenue',
     subOptions:[
@@ -59,11 +72,11 @@ const Home = () => {
       <H2 />
       <IntroVideo />
       <div className='mb-[5%]'/>
-      <ContactCard mainHead={ContactData.mainheading} mainDesc={ContactData.mainDesc} button={ContactData.button} buttonLink={ContactData.buttonLink} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
+      <ContactCard mainHead={ContactData.mainheading[0]} mainDesc={ContactData.mainDesc[0]} button={ContactData.button[0]} buttonLink={ContactData.buttonLink} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
       <IndustriesIntro />
       <RecruitmentSols />
       <div className='mb-[5%]'/>
-      <ContactCard mainHead={ContactData.mainheading} mainDesc={ContactData.mainDesc} button={ContactData.button} buttonLink={ContactData.buttonLink} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
+      <ContactCard mainHead={ContactData.mainheading[1]} mainDesc={ContactData.mainDesc[1]} button={ContactData.button[1]} buttonLink={ContactData.buttonLink} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
       <div className='mb-[5%]'/>
     </>
   )
