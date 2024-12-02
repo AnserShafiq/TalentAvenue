@@ -6,7 +6,9 @@ export const PrivacyPolicyContent = [
       No:0,
       Title: 'Main',
       Description: (<div className="text-[1.2rem]">
-      Talent Avenue Employment Services Limited (and/or its applicable affiliated companies) with a registered address at 20 Bay Street, Ste 800, Toronto, ON (“Company,” “we” or “us”) is committed to protecting and respecting your privacy while visiting this <Link to={'/'} className='text-g-1'>website</Link>. This “Privacy Notice” or “Policy” (together with other documents referred to herein) describes what personal information we collect from you and how we collect, use, and process it. There is an index below so you can go straight to the relevant section if you prefer.
+      Talent Avenue Employment Services Limited (and/or its applicable affiliated companies) with a registered address at 20 Bay Street, Ste 800, Toronto, ON (“Company,” “we” or “us”) is committed to protecting and respecting your privacy while visiting this <Link to={'/'} className='text-g-1'>website</Link>.
+      <br/> This “Privacy Notice” or “Policy” (together with other documents referred to herein) describes what personal information we collect from you and how we collect, use, and process it.
+      <br/> There is an index below so you can go straight to the relevant section if you prefer.
       </div>),
   },{
       Id:'Personal info that company demands',
@@ -151,37 +153,139 @@ export const CookiesPolicyContent = [
     No:0,
     Title: 'Main',
     Description: (<div className="text-[1.2rem]">
-    <b>Multiple fraud attempts using the Talent Avenue name and trademark have been reported in several countries. Please be aware that Talent Avenue will NEVER request payment of any kind from a candidate or an associate during a job search or a selection process. We pledge to maintain a fee-free policy and prioritize transparency in our interactions with candidates and associates.</b>
-    <br />
-    We have been informed that the Talent Avenue name and trademark are being used in several countries by individuals who are in no way related to Talent Avenue. These individuals place job adverts on general market websites using the name ‘Talent Avenue’ without our permission. We also have reason to believe that e-mails, letters, telephone calls, and other actions taken by these individuals are nothing but illegitimate attempts to obtain money and access to job seekers’ and associates’ personal and confidential information. We want to emphasize that Talent Avenue is committed to ensuring the security and privacy of our community and will take necessary actions to address such unauthorized and fraudulent activities.
-    </div>),
+    Talent Avenue Employment Services Limited (and/or its applicable affiliated companies) with a registered address at 20 Bay Street, Ste 800, Toronto, ON (“Company,” “we” or “us”) is committed to protecting and respecting your privacy while visiting this <Link to={'/'} className='text-g-1'>website</Link>.
+      <br/> This “Privacy Notice” or “Policy” (together with other documents referred to herein) describes what personal information we collect from you and how we collect, use, and process it.
+      <br/> There is an index below so you can go straight to the relevant section if you prefer.
+      </div>),
 },{
-    Id:'Protect Yourself',
+    Id:'What is cookie and why do we use it?',
     No:1,
-    Title:'Protect Yourself',
+    Title:'What is cookie and why do we use it?',
     Description:(
         <>
             <ul>
               <li>
-                Before releasing any personal information, ID, or bank account details during a job search process, make sure your contact is an authorized Talent Avenue representative. You can confirm this by getting in touch with a Talent Avenue office in your country. You can find the list of countries in which we operate on our website at <Link to={'/'} className="text-g-1">www.talentavenue.ca</Link> Beware of any unexpected email, instant message, voicemail, or fax that claims to be from Talent Avenue. Criminals can attempt to send malware or obtain access to your information or accounts using emails, phone calls, or text messages. If you receive such a message, get in touch with a Talent Avenue office in your country and verify that the message is legitimate. If you have received an email that you are not quite sure about, please forward it to us using the contact details in the section below. If you believe that you have been a victim of such scams, we strongly recommend that you report the incident to local authorities as soon as possible.
+              A cookie is a small piece of data (text file) that a website stores on your device (i.e., your computer, tablet, or cell phone) to remember information about you and facilitate your use of the Website. Cookies help improve the performance and your user experience and increase the relevance of our offerings on the Website and on third-party websites.
+              <br/>
+              For example, cookies set by ourselves or by our partners (so-called third-party cookies) allow us to track and offer you a better user experience by remembering your saved vacancies or your language preferences when you return to the Website.
               </li>
             </ul>
         </>
     )
 },{
-  Id:'Contact Us',
+  Id:'What types of cookies do we use and how long are they stored?',
   No:2,
-  Title:'Contact Us',
+  Title:'What types of cookies do we use and how long are they stored?',
+  Description:(
+      <>
+          We have explained the different types of cookies that we use below.
+          <ul>
+            <li>
+            <b>Strictly Necessary Cookies</b><br/>These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.
+            </li>
+            <li>
+              <b>Performance Cookies</b><br/>These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies we will not know when you have visited our site, and will not be able to monitor its performance.
+            </li>
+            <li>
+              <b>Functional Cookies</b><br/>These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third party providers whose services we have added to our pages. If you do not allow these cookies then some or all of these services may not function properly.
+            </li>
+            <li>
+              <b>Targeting Cookies</b><br/>These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store directly personal information, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.
+            </li>
+          </ul>
+          For more information on the specific cookies that we use, please reach out the <Link className="text-g-1" to={'/contact-us'}>Contact Us</Link> form and fill it up according to your questions.
+      </>
+  )
+},{
+  Id:'How do we use the cookies on our Website?',
+  No:3,
+  Title:'How do we use the cookies on our Website?',
   Description:(
       <>
           <ul>
             <li>
-            If you would like to report an abuse of the Talent Avenue name and trademark, please contact the Talent Avenue office in the country where the incident occurred. If Talent Avenue does not operate in that country, please send an email to: <Link className="text-g-1" to={'mailto:compliance@talentavenue.ca'}>compliance@talentavenue.ca</Link>. If you are looking for a job in your country, then please reach out to us. A list of the countries in which we operate can be found on our website at <Link className="text-g-1" to={'/'}>www.talentavenue.ca</Link>
+            By default, only Strictly Necessary cookies are enabled. These cookies are essential for the basic functionalities of the Website to operate, ensuring its accessibility. Without them, certain parts of the Website will not function properly.
+            <br/>
+            Performance, Functional, and Targeting cookies, on the other hand, are disabled by default. However, you have the opportunity to activate them when you first access the Website through the Cookie banner. Simply click the “Accept all” button or adjust your settings in the Cookie Preference Center, which can be found below the section titled “How can you manage cookies?”
+            <br/>
+            We utilize industry standard cookies to track your online behavior and gather statistical information at an aggregated level. This allows us to monitor the Website’s operation, improve its performance, and evaluate the effectiveness of our campaigns.
+            <br/>
+            For instance, we keep track of the number of visits to the Website, the source from which each visitor arrived (i.e., the website they visited before ours), and the destination to which each visitor proceeds after leaving our Website (i.e., the website they visit next).
             </li>
           </ul>
       </>
   )
-},
+},{
+  Id:'How can you manage cookies?',
+  No:4,
+  Title:'How can you manage cookies?',
+  Description:(
+      <>
+          <ul>
+            <li>
+            
+            If you haven’t modified your browser settings to block cookies, our systems will automatically generate Strictly Necessary Cookies whenever you visit the Website.
+            <br/>
+            Within the Cookie Preference Center, you have the ability to control your preferences and choose whether to allow or decline the storage of cookies based on their types (as explained in section 2 above). You can revoke your consent at any moment using the same Cookie Preference Center.
+            <br/>
+            Please be aware that disabling specific types of cookies may restrict your access to certain areas of the Website or limit the functionality available to you.
+            
+            </li>
+          </ul>
+      </>
+  )
+},{
+  Id:'Third-party cookies',
+  No:5,
+  Title:'Third-party cookies',
+  Description:(
+      <>
+          <ul>
+            <li>
+            
+            While utilizing the Website, you may come across links to external websites and/or content provided by third parties.
+            <br/>
+            Additionally, the Website may present you with the opportunity to further interact with us and share information with others through social networks like Facebook, LinkedIn, and Twitter.
+            <br/>
+            The inclusion of third-party content on our Website allows us to keep you informed with carefully selected information that you may find relevant or interesting. However, this may result in these third-party providers storing additional cookies on your device, over which we have no control.
+            <br/>
+            Therefore, we recommend that you visit the websites of such third parties and review their respective privacy and cookie policies for more details regarding their cookies and how you can manage them.
+            <br/>
+            Please be aware that if you choose to access third-party sites via this Website, the list of cookies provided in the previous section may not be exhaustive.            
+            </li>
+          </ul>
+      </>
+  )
+},{
+  Id:'How do we handle changes to this Privacy Notice?',
+  No:6,
+  Title:'How do we handle changes to this Privacy Notice?',
+  Description:(
+      <>
+          <ul>
+            <li>
+            
+            The terms of this Privacy Notice may undergo changes periodically. We will communicate any significant changes to this Privacy Notice through appropriate notices, either on this Website or by contacting you through other communication channels.
+            
+            </li>
+          </ul>
+      </>
+  )
+},{
+  Id:'To Overcome Queries',
+  No:7,
+  Title:'To Overcome Queries',
+  Description:(
+      <>
+          <ul>
+            <li>
+            
+            Questions, comments and requests regarding this Policy are welcomed and should be addressed via <Link className="text-g-1" to={'mailto:info@talentavenue.ca'}>info@talentavenue.ca</Link> or <Link className="text-g-1" to={'/contact-us'}>Form</Link>.            
+            </li>
+          </ul>
+      </>
+  )
+}
 ]
 
 export const TermsOfUseContent = [
