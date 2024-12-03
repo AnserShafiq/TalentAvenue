@@ -20,7 +20,7 @@ const OurIndustries = () => {
     ),
     mainDesc: "No matter the size of your hiring needs, we’ve got you covered – From Temporary Staffing to direct hires, we're ready to assist you.",
     button: 'Contact Us Now',
-    buttonLink: '/',
+    buttonLink: '/employers/application-form',
     subHead: 'Your advantages with talent avenue',
     subOptions:[
       {

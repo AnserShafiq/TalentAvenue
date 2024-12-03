@@ -12,6 +12,7 @@ import OurIndustries from './Pages/Industries/index.jsx';
 import ContactUs from './Pages/ContactUS/index.jsx';
 import { CookiesPolicy, PrivacyPolicy, SecurityPhishing, TermsOfUse } from './Pages/ExtraPages/ExportPage.jsx';
 import ReactLoading from 'react-loading';
+import { EmployersForm } from './Pages/ApplicationForms/index.jsx';
 
 
 
@@ -60,6 +61,7 @@ const AppBody = () =>{
           <Route path='/faqs' element={<FAQs />} />
           <Route path='/how-we-work' element={<HowWeWorks />}/>
           <Route path='/employers' element={<Employers />} />
+          <Route path='/employers/application-form' element={<EmployersForm />}/>
           <Route path='/job-seekers' element={<JobSeekers />} />
           <Route path='/industries-we-deal' element={<OurIndustries />} />
           <Route path='/contact-us' element={<ContactUs />} />
