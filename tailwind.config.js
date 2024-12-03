@@ -1,3 +1,4 @@
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   content: [
@@ -44,6 +45,42 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({addUtilities}) {
+      addUtilities({
+        '.flip-card': {
+          cursor:'pointer',
+          width: '100%',
+          height: '100%',
+          perspective: '1000px',
+        },
+        '.flip-card-inner': {
+          position:' relative',
+          width: '100%',
+          height: '100%',
+          textAlign: 'center',
+          transition: 'transform 0.8s',
+          transformStyle: 'preserve-3d',
+        },
+        '.flip-card:hover .flip-card-inner':{
+          transform: 'rotateY(-180deg)',
+        },
+        '.flip-card-front, .flip-card-back':{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          webkitBackfaceVisibility: 'hidden', 
+          backfaceVisibility: 'hidden',
+        },
+        '.flip-card-front': {
+          color: 'black',
+        },
+        '.flip-card-back': {
+          color:' white',
+          transform: 'rotateY(180deg)',
+        }
+      })
+    })
+  ],
 }
 

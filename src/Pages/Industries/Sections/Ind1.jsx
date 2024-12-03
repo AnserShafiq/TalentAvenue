@@ -68,10 +68,12 @@ const IndustriesList = () => {
         <div className='flex lg:flex-row flex-wrap justify-around items-center w-full'>
           {
             OurIndustries.map((Industry, index) =>(
-              <IndustryFlipCard target={Industry} key={index} />
+                <IndustryFlipCard target={Industry} key={index}/>
             ))
           }
+          
         </div>
+        
     </div>
   )
 }
