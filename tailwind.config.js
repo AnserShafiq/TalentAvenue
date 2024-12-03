@@ -31,7 +31,7 @@ module.exports = {
         'mp-m': '1.15rem',
         'cardTitle-d':'1.7rem',
         'cardTitle-m':'1.4rem',
-        'cardText-d':'1.1rem',
+        'cardText-d':'1.2rem',
         'testimonials-d':'1.3rem',
       },
       screens:{
@@ -40,6 +40,7 @@ module.exports = {
       backgroundImage:{
         'ContactCard':"url('/src/Images/gradientback.png')",
         'JsCards':"url('/src/Images/Jobseekers/cards.png')",
+        'PopUpBg-1':"url('/src/Images/PopUps/Pop1.jpg')"
       }
     },
   },

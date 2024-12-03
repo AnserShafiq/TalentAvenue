@@ -11,7 +11,7 @@ const H2 = () => {
 
   const BodyText= {
     title: 'How We Work',
-    paragraph: 'Talent Avenue teams up with both local and global companies to find and hire the talent you need for your business. We recruit, screen, and match top-tier individuals with the right skills and qualifications. We provide personalized training programs to ensure employees are fully prepared for their first day. Our ongoing support and assistance guarantee that we provide the best staffing solutions.',
+    paragraph: 'Talent Avenue teams up with both local & global companies to find & hire the talent you need for your business. We recruit, screen, & match top-tier individuals with the right skills & qualifications. We provide personalized training programs to ensure employees are fully prepared for their first day. Our ongoing support & assistance guarantee that we provide the best staffing solutions.',
 
   }
 
@@ -19,21 +19,25 @@ const H2 = () => {
     {
       icon: Icon2,
       title: 'According to your needs',
-      tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo',
-    },{
+      tagline: 'We connect job seekers and employers by understanding their unique needs, ensuring the perfect hiring match every time.',
+    },
+    {
       icon: Icon3,
       title: 'Uniqueness & Authenticity',
-      tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo',
-    },{
+      tagline: 'Delivering tailored hiring solutions that highlight individuality, ensuring authentic connections for job seekers and employers.',
+    },
+    {
       icon: Icon4,
       title: 'Matching of skills & essentials',
-      tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo',
-    },{
+      tagline: 'Our expert team matches the right skills and requirements, bridging the gap between job seekers and employers seamlessly.',
+    },
+    {
       icon: Icon1,
       title: 'First train, then work',
-      tagline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo',
+      tagline: 'We offer training programs to prepare candidates, ensuring they meet employer expectations and excel in their roles.',
     },
-  ]
+  ];
+  
 
   return (
     <div className='flex flex-col items-center my-sm w-[95%] lg:w-[75%] mx-auto '>

@@ -7,8 +7,8 @@ const IndustryCard = ({title, desc, link, profile}) => {
         <img className='rounded-t-[25px] object-cover object-center lg:h-[250px]' src={profile} alt={`${title}'s Pic`} />
         <div className='flex flex-col px-6 py-4'>
             <h3 className=' text-cardTitle-m lg:text-cardTitle-d text-g-1 capitalize font-semibold tracking-wide'>{title}</h3>
-            <p className='text-[1rem] text-w-1 mb-4'>{desc}</p>
-            <Link className=' text-g-1 text-[1.1rem] border-b-2 border-transparent hover:text-w-1 hover:border-w-1 w-fit ' to={link}>Explore</Link>
+            <p className='text-[1.2rem] text-w-1 mb-4'>{desc}</p>
+            <Link className=' text-g-1 text-[1.2rem] border-b-2 border-transparent hover:text-w-1 hover:border-g-1 w-fit ' to={link}>Apply Now</Link>
         </div>
     </div>
   )

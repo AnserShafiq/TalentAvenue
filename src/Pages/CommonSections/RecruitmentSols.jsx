@@ -48,45 +48,51 @@ const RecruitmentSols = () => {
     const Recruitments = [
         {
             type: '',
-            mobile:true,
-            title:'Contractual Placements',
+            mobile: true,
+            title: 'Contractual Placements',
             img: RC1,
-            desc: 'We manage the entire contract based recruitment process, from candidate search to payroll and administration.',
-            link:'/',
-        },{
-            type:'Main',
-            mobile:false,
-            img: Main,
-        },{
-            type: '',
-            mobile:true,
-            title:'Permanent Placements',
-            img: RC2,
-            desc: 'From sourcing to shortlisting, we guarantee the right match for your direct hire needs.',
-            link:'/',
-        },{
-            type: '',
-            mobile:true,
-            title:'Business Essentials',
-            img: RC3,
-            desc: 'Use our expertise to find the most diverse and capable talent in the market. And become a well managed business.',
-            link:'/',
-        },{
-            type: '',
-            mobile:false,
-            title:'Managed Outsourcing',
-            img: RC4,
-            desc: 'Use our expertise to find the most diverse and capable talent in the market. And become a well managed business.',
-            link:'/',
-        },{
-            type: '',
-            mobile:false,
-            title:'Our Trainings',
-            img: RC5,
-            desc: 'Use our expertise to find the most diverse and capable talent in the market. And become a well managed business.',
-            link:'/',
+            desc: 'We handle all aspects of contract-based hiring, from talent acquisition to payroll and administrative management.',
+            link: '/',
         },
-    ]
+        {
+            type: 'Main',
+            mobile: false,
+            img: Main,
+        },
+        {
+            type: '',
+            mobile: true,
+            title: 'Permanent Placements',
+            img: RC2,
+            desc: 'We ensure the perfect fit for your long-term hiring needs by carefully sourcing and shortlisting top talent.',
+            link: '/',
+        },
+        {
+            type: '',
+            mobile: true,
+            title: 'Business Essentials',
+            img: RC3,
+            desc: 'Leverage our expertise to discover exceptional talent that drives business growth and operational excellence.',
+            link: '/',
+        },
+        {
+            type: '',
+            mobile: false,
+            title: 'Managed Outsourcing',
+            img: RC4,
+            desc: 'Rely on us for end-to-end outsourcing solutions, delivering skilled talent to meet your specific business demands.',
+            link: '/',
+        },
+        {
+            type: '',
+            mobile: false,
+            title: 'Our Trainings',
+            img: RC5,
+            desc: 'Empower your workforce with our targeted training programs, designed to build skills and enhance performance.',
+            link: '/',
+        },
+    ];
+    
 
     return (
         <div className='flex flex-col justify-center items-center my-sm w-[95%] lg:w-[80%] 2xl:w-[70%] h-[100%] mx-auto'>

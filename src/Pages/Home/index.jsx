@@ -11,6 +11,8 @@ import People from '../../Images/Home/People.png'
 import Countries from '../../Images/Home/Countries.png';
 import Handshake from '../../Images/Home/Handshake.png'
 import IntroVideo from '../CommonSections/IntroVideo.jsx'
+import Popup from '../../Components/PopUp.jsx';
+import Testimonials from '../CommonSections/OurTestimonials.jsx';
 
 const Home = () => {
   const Section1Data={
@@ -20,8 +22,8 @@ const Home = () => {
   const section1SecondLine = (
       <>
         Click Here  
-        <div className='ml-0 lg:ml-2 flex font-extrabold flex-col items-center leading-normal'>
-          <Underlining bodytext={'To Find Talent !!!'} textcolor='g-1'/>
+        <div className='ml-0 lg:ml-2 flex flex-col items-center '>
+          <Popup btnCSS={'font-extrabold leading-normal uppercase'}><Underlining bodytext={'To Find Talent !!!'} textcolor='g-1'/></Popup>
         </div>
       </>
     )
@@ -76,6 +78,9 @@ const Home = () => {
       <IndustriesIntro />
       <RecruitmentSols />
       <div className='mb-[5%]'/>
+
+      <Testimonials Numbers={['Six','Two', 'Four']}/>
+
       <ContactCard mainHead={ContactData.mainheading[1]} mainDesc={ContactData.mainDesc[1]} button={ContactData.button[1]} buttonLink={ContactData.buttonLink} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
       <div className='mb-[5%]'/>
     </>
