@@ -11,7 +11,7 @@ const IndustryFlipCard = ({ target }) => {
         alt={`${target.Name} - Pic`}
       />
       <div className="absolute w-full h-full top-0 left-0 flex px-6 pb-10 items-end justify-center text-center leading-tight bg-gradient-to-t from-[#030303af] from-0% to-transparent to-40% rounded-[20px]">
-        <h3 className="text-w-1 text-[1.5rem] font-[600] uppercase tracking-wide">{target.Name}</h3>
+        <h3 className="text-w-1 text-[1.5rem] font-extrabold lg:font-[600] uppercase stroke-cyan-500 tracking-wide">{target.Name}</h3>
       </div>
     </div>
   );
@@ -23,7 +23,7 @@ const IndustryFlipCard = ({ target }) => {
         src={target.Image}
         alt={`${target.Name} - Pic`}
       />
-      <div className="absolute w-full h-full top-0 left-0 flex flex-col px-6 py-8 text-start items-start justify-start bg-black bg-opacity-80 rounded-[20px]">
+      <div className="absolute w-full h-full top-0 left-0 flex flex-col px-6 py-3 lg:py-8 text-start items-start justify-start bg-black bg-opacity-80 rounded-[20px]">
         <h3 className="text-g-1 text-[1.5rem] font-bold tracking-wide uppercase">{target.Name}</h3>
         <p className='text-w-1 text-[1.1rem] lg:text-[1.3rem] font-[300]  leading-tight mb-2'> <b className='font-semibold'>Job Types:</b> {target.JobTypes}</p>
         <p className='text-w-1 text-[1.1rem] lg:text-[1.3rem] font-[300] leading-tight'> <b className='font-semibold'>Focus:</b> {target.Statement}</p>
@@ -33,7 +33,7 @@ const IndustryFlipCard = ({ target }) => {
   );
 
   return (
-    <div className="flex flex-col w-[300px] h-[350px] lg:w-[375px] lg:h-[420px] my-5 lg:my-10 rounded-[20px]">
+    <div className="flex flex-col w-[300px] h-[370px] lg:w-[375px] lg:h-[420px] my-5 lg:my-10 rounded-[20px]">
       <ReactFlipCard 
         containerStyle={
           {
