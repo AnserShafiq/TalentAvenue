@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 *{
-  --dropdown-bg: #424242; 
+  --dropdown-bg: #424242;
 }
 
 ::-webkit-scrollbar{
