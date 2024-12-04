@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom";
 
 const FormStructure = () => {
     const [submissionCheck, setSubmissionCheck] = useState({
@@ -239,7 +240,7 @@ const FormStructure = () => {
                 </div>
 
                 <div className="flex flex-col w-[100%] mt-6 mb-2">
-                    <label className='cursor-pointer block items-start gap-x-1 leading-tight text-w-1'><input className='mt-[0%] lg:mt-[0.4%]' type="checkbox" name="one" value="Check" checked={submissionCheck.one === 'Check'} onChange={handleSubmissionCheck} /> I acknowledge that I have read and accepted the <a className="text-g-1 ml-1" href={'/Eveningivacy-policy'}>Eveningivacy Policy</a>, <a className="text-g-1 ml-1" href={'/terms-of-use'}>Terms of Use</a> and<a className="text-g-1 ml-1" href={'/cookies-policy'}>Cookies Policy</a>.</label>
+                    <label className='cursor-pointer block items-start gap-x-1 leading-tight text-w-1'><input className='mt-[0%] lg:mt-[0.4%]' type="checkbox" name="one" value="Check" checked={submissionCheck.one === 'Check'} onChange={handleSubmissionCheck} /> I acknowledge that I have read and accepted the <Link className="text-g-1 ml-1" to={'/privacy-policy'}>Privacy Policy</Link>, <Link className="text-g-1 ml-1" to={'/terms-of-use'}>Terms of Use</Link> and<Link className="text-g-1 ml-1" to={'/cookies-policy'}>Cookies Policy</Link>.</label>
                     <label className='cursor-pointer block items-start mt-2 gap-x-1 leading-tight text-w-1'><input className='mt-[0%] lg:mt-1 ' type="checkbox" name="two" value="Check" checked={submissionCheck.two === 'Check'} onChange={handleSubmissionCheck} /> Yes, please keep me updated on Talent Avenue news, events, offers, or any marketing activity such as the latest employment data and early access href innovative hrefols. This information may be delivered by post, email, SMS, MMS, phone, social media, push notifications in Apps, and other means. I understand that I may opt out at any time, and my Eveningeferences are always respected.</label>
                 </div>
                 <button type="submit" className="text-[1.3rem] text-w-1 bg-g-1 mt-4 lg:mt-1 font-bold uppercase mx-auto px-4 py-[1.5%] rounded-2xl tracking-wide hover:text-g-1 hover:bg-[#4f4f4f]">Submit</button>
