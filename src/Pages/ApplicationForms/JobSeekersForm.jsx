@@ -235,7 +235,7 @@ const FormStructure = () => {
                 </div>
                 <div className="flex flex-col w-[100%] mb-2">
                     <label className="text-[1.2rem] tracking-wide text-w-1">Upload your resume <span className="text-g-1">*</span></label>
-                    <input className="text-[1.1rem] rounded-xl text-w-1 font-[300]" type="file"/>
+                    <input className="text-[1.1rem] text-w-1 font-[300]" type="file"/>
                 </div>
 
                 <div className="flex flex-col w-[100%] mt-6 mb-2">
