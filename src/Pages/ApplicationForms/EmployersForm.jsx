@@ -108,7 +108,7 @@ const FormStructure = () => {
                     <input className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" required type="text" name="jobTitle" data-parent="Applicant" value={fields.Applicant.jobTitle} onChange={handleEntry} />
                 </div>
                 {/* Company Details */}
-                <h2 className="text-[1.3rem] lg:text-[1.5rem] uppercase tracking-wide font-semibold text-g-1 w-full">Company Details</h2>
+                <h2 className="text-[1.3rem] lg:text-[1.5rem] uppercase tracking-wide font-semibold text-g-1 w-full mt-4">Company Details</h2>
                 <div className="flex flex-col w-[100%] lg:w-[49%] mb-2">
                     <label className="text-[1.2rem] tracking-wide text-w-1">Company Name <span className="text-g-1">*</span></label>
                     <input className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" required type="text" name="name" data-parent="Company" value={fields.Company.name} onChange={handleEntry} />
@@ -139,7 +139,7 @@ const FormStructure = () => {
                 </div>
 
                 {/* Other Information */}
-                <h2 className="text-[1.3rem] lg:text-[1.5rem] uppercase tracking-wide font-semibold text-g-1 w-full">Other Details</h2>
+                <h2 className="text-[1.3rem] lg:text-[1.5rem] uppercase tracking-wide font-semibold text-g-1 w-full mt-4">Other Details</h2>
                 <div className="flex flex-col w-[100%] mb-2">
                     <label className="text-[1.2rem] tracking-wide text-w-1">What you prefer href contact you?</label>
                     <div className="flex flex-row text-w-1 text-[1.1rem] font-[300]">
@@ -170,7 +170,7 @@ const FormStructure = () => {
                     <textarea className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" row={3} name="message" value={fields.message} onChange={handleEntry} />
                 </div>
 
-                <div className="flex flex-col w-[100%] mt-4 mb-2">
+                <div className="flex flex-col w-[100%] mt-6 mb-2">
                     <label className='cursor-pointer block items-start gap-x-1 leading-tight text-w-1'><input className='mt-[0%] lg:mt-[0.4%]' type="checkbox" name="one" value="Check" checked={submissionCheck.one === 'Check'} onChange={handleSubmissionCheck} /> I acknowledge that I have read and accepted the <a className="text-g-1 ml-1" href={'/privacy-policy'}>Privacy Policy</a>, <a className="text-g-1 ml-1" href={'/terms-of-use'}>Terms of Use</a> and<a className="text-g-1 ml-1" href={'/cookies-policy'}>Cookies Policy</a>.</label>
                     <label className='cursor-pointer block items-start mt-2 gap-x-1 leading-tight text-w-1'><input className='mt-[0%] lg:mt-1 ' type="checkbox" name="two" value="Check" checked={submissionCheck.two === 'Check'} onChange={handleSubmissionCheck} /> Yes, please keep me updated on Talent Avenue news, events, offers, or any marketing activity such as the latest employment data and early access href innovative hrefols. This information may be delivered by post, email, SMS, MMS, phone, social media, push notifications in Apps, and other means. I understand that I may opt out at any time, and my preferences are always respected.</label>
                 </div>
