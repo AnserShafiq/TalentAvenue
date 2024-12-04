@@ -37,8 +37,17 @@ const FormStructure = () => {
     }
 
     const handleEntry = (e) => {
-        const { name, value, dataset } = e.target;
+        let { name, value, dataset } = e.target;
         const parent = dataset.parent;
+
+        if(name === 'contactNumber'){
+            let forNumberCheck = value.replace(/\D/g,'');
+            if(forNumberCheck.length >10){
+                forNumberCheck = forNumberCheck.slice(0,10);
+            }
+            forNumberCheck = forNumberCheck.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2 $3');
+            value = forNumberCheck
+        }
 
         if(parent!=='Applicant' && parent!=='Company'){
 

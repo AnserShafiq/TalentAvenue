@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Popup from '../PopUp'
 
 const IndustryCard = ({title, desc, link, profile}) => {
   return (
@@ -8,7 +8,7 @@ const IndustryCard = ({title, desc, link, profile}) => {
         <div className='flex flex-col px-6 py-4'>
             <h3 className=' text-cardTitle-m lg:text-cardTitle-d text-g-1 capitalize font-semibold tracking-wide'>{title}</h3>
             <p className='text-[1.2rem] text-w-1 mb-4'>{desc}</p>
-            <Link className=' text-g-1 text-[1.2rem] border-b-2 border-transparent hover:text-w-1 hover:border-g-1 w-fit ' to={link}>Apply Now</Link>
+            <Popup btnCSS={'text-g-1 text-[1.2rem] border-b-2 border-transparent z-0 hover:text-w-1 hover:border-g-1 w-fit'}>Apply Now</Popup>
         </div>
     </div>
   )
