@@ -40,7 +40,7 @@ const H2 = () => {
   
 
   return (
-    <div className='flex flex-col items-center my-sm w-[95%] lg:w-[75%] mx-auto '>
+    <div className='flex flex-col items-center my-sm w-[95%] lg:w-[85%] 2xl:w-[75%] mx-auto '>
         <MainHead title={BodyText.title} titleColor={'w-1'} description={BodyText.paragraph} descriptionColor={'w-1'} />
         <div className='grid grid-cols[1fr] lg:grid-cols-[1fr,1fr] my-4 w-full '>
         {

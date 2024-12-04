@@ -63,7 +63,7 @@ const IndustriesList = () => {
   }
 
   return (
-    <div className='flex flex-col my-[10%] lg:my-sm w-[95%] lg:w-[80%] 2xl:w-[70%] mx-auto'>
+    <div className='flex flex-col my-[10%] lg:my-sm w-[95%] lg:w-[83%] 2xl:w-[70%] mx-auto'>
         <MainHead title={MainHeadContent.Head} titleColor={'w-1'} description={MainHeadContent.Desc} descriptionColor={'w-1'} />
         <div className='flex lg:flex-row flex-wrap justify-around items-center w-full'>
           {

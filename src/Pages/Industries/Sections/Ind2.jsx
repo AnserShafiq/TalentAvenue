@@ -52,7 +52,7 @@ const Ind2 = () => {
     ];
 
     return DataContent.map((Content, index) => (
-        <div className='flex flex-col mt-[4%] mb-0 lg:my-sm w-[90%] lg:w-[80%] 2xl:w-[70%] mx-auto' key={index}>
+        <div className='flex flex-col mt-[4%] mb-0 lg:my-sm w-[90%] lg:w-[85%] 2xl:w-[70%] mx-auto' key={index}>
             <div className={`flex flex-col mb-0 ${Content.reverse ? 'lg:flex-row-reverse': 'lg:flex-row lg:mb-12'} w-full`}>
                 <div className={`w-full lg:w-[50%] flex lg:min-h-[48vh]`}>
                     <img className='w-full h-full rounded-[20px] shadow-md shadow-[#bc9a642f]' src={Content.sideImg} alt='cheeck'/>

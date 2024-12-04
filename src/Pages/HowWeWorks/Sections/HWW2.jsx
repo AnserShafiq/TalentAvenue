@@ -41,7 +41,7 @@ const HWW2 = () => {
   ]
 
   return (
-    <div className='flex flex-col items-center mt-sm w-[95%] lg:w-[70%] mx-auto '>
+    <div className='flex flex-col items-center mt-sm w-[95%] lg:w-[80%] 2xl:w-[70%] mx-auto '>
         <MainHead title={'Your Business, Our Management'} titleColor={'w-1'} description={'We work hard to maximize efficiency and cost savings. we offer three primary recruitment management models:'} descriptionColor={'w-1'}/>
         {ModelsData.map((Model, index) => (
               <div className={`flex flex-col w-[90%] lg:w-full my-6 ${(index+1)%2 === 0 ? 'lg:flex-row-reverse':'lg:flex-row'}`} key={index}>

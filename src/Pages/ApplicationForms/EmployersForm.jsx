@@ -23,7 +23,7 @@ const FormStructure = () => {
             city:'',
             state:'',
         },
-        wayhrefContact:'',
+        waytoContact:'',
         industryType:'',
         countOfStaffNeeded:'',
         message:'',
@@ -142,10 +142,10 @@ const FormStructure = () => {
                 {/* Other Information */}
                 <h2 className="text-[1.3rem] lg:text-[1.5rem] uppercase tracking-wide font-semibold text-g-1 w-full mt-4">Other Details</h2>
                 <div className="flex flex-col w-[100%] mb-2">
-                    <label className="text-[1.2rem] tracking-wide text-w-1">What you prefer href contact you?</label>
+                    <label className="text-[1.2rem] tracking-wide text-w-1">What you prefer to contact you?</label>
                     <div className="flex flex-row text-w-1 text-[1.1rem] font-[300]">
-                        <label className='cursor-pointer flex items-center gap-1 mr-6 lg:mr-4'><input className='' type="radio" name="wayhrefContact" value="Call" checked={fields.wayhrefContact === 'Call'} onChange={handleEntry} /> Call</label>
-                        <label className='cursor-pointer flex items-center gap-1 lg:mr-4'><input className='' type="radio" name="wayhrefContact" value="Email" checked={fields.wayhrefContact === 'Email'} onChange={handleEntry} /> E-Mail</label>
+                        <label className='cursor-pointer flex items-center gap-1 mr-6 lg:mr-4'><input className='' type="radio" name="waytoContact" value="Call" checked={fields.waytoContact === 'Call'} onChange={handleEntry} /> Call</label>
+                        <label className='cursor-pointer flex items-center gap-1 lg:mr-4'><input className='' type="radio" name="waytoContact" value="Email" checked={fields.waytoContact === 'Email'} onChange={handleEntry} /> E-Mail</label>
                     </div>
                 </div>
                 <div className="flex flex-col w-[100%] mb-2">
@@ -167,13 +167,13 @@ const FormStructure = () => {
                     <input className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" type="number" name="countOfStaffNeeded" value={fields.countOfStaffNeeded} onChange={handleEntry} required/>
                 </div>
                 <div className="flex flex-col w-[100%] mb-2">
-                    <label className="text-[1.2rem] tracking-wide text-w-1">Any additional info you like href share?</label>
+                    <label className="text-[1.2rem] tracking-wide text-w-1">Any additional info you like to share?</label>
                     <textarea className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" row={3} name="message" value={fields.message} onChange={handleEntry} />
                 </div>
 
                 <div className="flex flex-col w-[100%] mt-6 mb-2">
                 <label className='cursor-pointer block items-start gap-x-1 leading-tight text-w-1'><input className='mt-[0%] lg:mt-[0.4%]' type="checkbox" name="one" value="Check" checked={submissionCheck.one === 'Check'} onChange={handleSubmissionCheck} /> I acknowledge that I have read and accepted the <Link className="text-g-1 ml-1" to={'/privacy-policy'}>Privacy Policy</Link>, <Link className="text-g-1 ml-1" to={'/terms-of-use'}>Terms of Use</Link> and<Link className="text-g-1 ml-1" to={'/cookies-policy'}>Cookies Policy</Link>.</label>
-                    <label className='cursor-pointer block items-start mt-2 gap-x-1 leading-tight text-w-1'><input className='mt-[0%] lg:mt-1 ' type="checkbox" name="two" value="Check" checked={submissionCheck.two === 'Check'} onChange={handleSubmissionCheck} /> Yes, please keep me updated on Talent Avenue news, events, offers, or any marketing activity such as the latest employment data and early access href innovative hrefols. This information may be delivered by post, email, SMS, MMS, phone, social media, push notifications in Apps, and other means. I understand that I may opt out at any time, and my preferences are always respected.</label>
+                    <label className='cursor-pointer block items-start mt-2 gap-x-1 leading-tight text-w-1'><input className='mt-[0%] lg:mt-1 ' type="checkbox" name="two" value="Check" checked={submissionCheck.two === 'Check'} onChange={handleSubmissionCheck} /> Yes, please keep me updated on Talent Avenue news, events, offers, or any marketing activity such as the latest employment data and early access to innovative tools. This information may be delivered by post, email, SMS, MMS, phone, social media, push notifications in Apps, and other means. I understand that I may opt out at any time, and my preferences are always respected.</label>
                 </div>
                 <button type="submit" className="text-[1.3rem] text-w-1 bg-g-1 mt-4 lg:mt-1 font-bold uppercase mx-auto px-4 py-[1.5%] rounded-2xl tracking-wide hover:text-g-1 hover:bg-[#4f4f4f]">Submit</button>
             </form>
@@ -183,7 +183,7 @@ const FormStructure = () => {
 export const EmployersFormData = {
     Left: {
         Heading:'Employees Request',
-        Description: "Let us know the position you need href fill, and Intellect Workforce will help you find the right fit. Please complete the form below, and we'll contact you href initiate the recruitment process."
+        Description: "Let us know the position you need to fill, and Intellect Workforce will help you find the right fit. Please complete the form below, and we'll contact you to initiate the recruitment process."
     },
     Right: () => <FormStructure />
 }

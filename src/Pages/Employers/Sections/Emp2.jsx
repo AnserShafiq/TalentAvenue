@@ -15,8 +15,8 @@ const Emp2 = () => {
     ]
     
     return (
-        <div className='flex relative flex-col justify-center items-center my-sm w-[95%] lg:w-[80%] 2xl:w-[70%] h-[100%] mx-auto'>
-            <img className={`w-full h-[50vh] lg:h-[80vh] object-[78%] lg:object-center object-cover rounded-[20px]`} src={DisplayImg} alt={`${Content.title} - Pic `} />
+        <div className='flex relative flex-col justify-center items-center my-sm w-[95%] lg:w-[83%] 2xl:w-[70%] h-[100%] mx-auto'>
+            <img className={`w-full h-[50vh] lg:h-[83vh] object-[78%] lg:object-center object-cover rounded-[20px]`} src={DisplayImg} alt={`${Content.title} - Pic `} />
             <div className='relative mt-6 lg:mt-0 lg:absolute lg:top-0 left-0 h-full lg:bg-[#0000007a] lg:px-[6%] flex flex-col rounded-[20px] justify-center'>
                 <MainHead title={Content.title} titleColor={'w-1'} description={Content.desc1} descriptionColor={'w-1'}  />
                 <div className='grid lg:grid-cols-2 w-[90%] mx-auto'>

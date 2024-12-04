@@ -3,7 +3,7 @@ import MainHead from '../../Components/SectionsHead/MainHead'
 
 const RecruitmentProcess = ({Heading,Process}) => {
   return (
-    <div className='flex relative flex-col justify-center items-center my-sm w-[95%] lg:w-[80%] 2xl:w-[70%] mx-auto'>
+    <div className='flex relative flex-col justify-center items-center my-sm w-[95%] lg:w-[85%] 2xl:w-[70%] mx-auto'>
         <MainHead title={Heading} titleColor={'w-1'}/>
         <div className='flex lg:grid flex-col lg:grid-cols-5 gap-y-[2%] lg:gap-y-0 lg:gap-x-[2%] w-[80%] lg:w-full align-center'>
             {

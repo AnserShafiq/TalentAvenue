@@ -97,11 +97,11 @@ const RecruitmentSols = () => {
     
 
     return (
-        <div className='flex flex-col justify-center items-center my-sm w-[95%] lg:w-[80%] 2xl:w-[70%] h-[100%] mx-auto'>
+        <div className='flex flex-col justify-center items-center my-sm w-[95%] lg:w-[85%] 2xl:w-[70%] h-[100%] mx-auto'>
             <MainHead title={
                 mobileCheck ? (BodyText.M_Name) : (BodyText.D_Name)
             } titleColor={'w-1'} description={BodyText.Para} descriptionColor={'w-1'}/>
-            <div className='flex flex-col lg:grid lg:grid-cols-3 w-[80%] 2xl:w-[90%] gap-x-[6%] gap-y-[4%] mt-5 mb-3' >
+            <div className='flex flex-col lg:grid lg:grid-cols-3 w-[80%] lg:w-[90%] gap-x-[6%] gap-y-[4%] mt-5 mb-3' >
                 {
                     Recruitments.map((Child, index) => (  <RecruitmentCard type={Child.type} mobileView={Child.mobile} title={Child.title} desc={Child.desc} link={Child.link} targetIcon={Child.img} key={index} />))
                 }

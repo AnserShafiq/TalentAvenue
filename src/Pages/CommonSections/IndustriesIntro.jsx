@@ -30,7 +30,7 @@ const IndustriesIntro = () => {
         },
     ]
     return (
-        <div className='flex flex-col items-center my-sm w-[95%] lg:w-[75%] mx-auto '>
+        <div className='flex flex-col items-center my-sm w-[95%] lg:w-[85%] 2xl:w-[75%]  mx-auto '>
             <MainHead title={BodyText.Name} titleColor={'w-1'} description = {BodyText.Paragraph} descriptionColor={'w-1'} />
             <div className='flex flex-col mx-[7%] lg:grid lg:grid-cols-[1fr,1fr,1fr] gap-[5%] my-5'>
                 {

@@ -27,7 +27,7 @@ const FnF = () => {
     ]
 
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-5 my-5 lg:my-sm w-[95%] lg:w-[80%] 2xl:w-[70%] h-[100%] mx-auto'>
+        <div className='grid grid-cols-1 lg:grid-cols-5 my-5 lg:my-sm w-[95%] lg:w-[85%] 2xl:w-[70%] h-[100%] mx-auto'>
             {
                 Content.map((Data, index) => (
                     <div className='flex flex-col pb-6 lg:pb-0 px-6' key={index}> 
