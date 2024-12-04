@@ -37,7 +37,7 @@ const IndustriesIntro = () => {
                     ThreeIndustries.map((Indus, index) => (  <IndustryCard title={Indus.title} desc={Indus.desc} link={Indus.link} profile={Indus.image} key={index} />))
                 }
             </div>
-            <Link className='text-[1.3rem] hover:bg-g-1 text-g-1 hover:text-w-1 px-4 mt-3 py-1 rounded-[20px] border-g-1 border-2' to={'/'}>View More</Link>
+            <Link className='text-[1.3rem] hover:bg-g-1 text-g-1 hover:text-w-1 px-4 mt-3 py-1 rounded-[20px] border-g-1 border-2' to={'/industries-we-deal'}>View More</Link>
         </div>
     )
 }

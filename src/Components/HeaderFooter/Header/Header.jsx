@@ -37,8 +37,8 @@ const Header = () => {
     return (
     <>
     <div className='w-full bg-[#707070] py-1 hidden lg:flex flex-row justify-center'>  
-        <Link className='leading-none text-g-1 font-semibold underline underline-offset-[3px]' to={'/job-seekers'}>Looking for a job?</Link>
-        <Link className='leading-none text-g-1 font-semibold underline underline-offset-[3px] ml-4' to={'/employers'}>Looking for the candidates?</Link>
+        <Link className='leading-none text-g-1 font-semibold underline underline-offset-[3px]' to={'/job-seekers/application-form'}>Looking for a job?</Link>
+        <Link className='leading-none text-g-1 font-semibold underline underline-offset-[3px] ml-4' to={'/employers/application-form'}>Looking for the candidates?</Link>
     </div>
     
     <div className={`flex flex-wrap flex-row bg-[#000000] px-X-Header py-Y-Header sticky left-0 top-0 z-10 w-[100%] transition-transform ease-in-out duration-500 shadow-sm shadow-[#bd996055] transform ${ShowHeader ? 'translate-y-0':'-translate-y-full'}`}>

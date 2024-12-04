@@ -49,7 +49,7 @@ const Home = () => {
       'Contact Us Now',
       'Connect With Us'
     ],
-    buttonLink: '/',
+    buttonLink: ['/contact-us','Popup'],
     subHead: 'Your advantages with talent avenue',
     subOptions:[
       {
@@ -74,14 +74,14 @@ const Home = () => {
       <H2 />
       <IntroVideo />
       <div className='mb-[5%]'/>
-      <ContactCard mainHead={ContactData.mainheading[0]} mainDesc={ContactData.mainDesc[0]} button={ContactData.button[0]} buttonLink={ContactData.buttonLink} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
+      <ContactCard mainHead={ContactData.mainheading[0]} mainDesc={ContactData.mainDesc[0]} button={ContactData.button[0]} buttonLink={ContactData.buttonLink[0]} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
       <IndustriesIntro />
       <RecruitmentSols />
       <div className='mb-[5%]'/>
 
       <Testimonials Numbers={['Six','Two', 'Four']}/>
 
-      <ContactCard mainHead={ContactData.mainheading[1]} mainDesc={ContactData.mainDesc[1]} button={ContactData.button[1]} buttonLink={ContactData.buttonLink} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
+      <ContactCard mainHead={ContactData.mainheading[1]} mainDesc={ContactData.mainDesc[1]} button={ContactData.button[1]} buttonLink={ContactData.buttonLink[1]} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
       <div className='mb-[5%]'/>
     </>
   )
