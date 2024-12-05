@@ -26,7 +26,7 @@ const Employers = () => {
             name:'Focused Needs Assessment',
             line:(
                 <>
-                Understand your culture, technical needs, and role to <Link to={'/employers'} className='text-g-1 capitalize hover:underline font-bold' >find the right fit</Link>.
+                Understand your culture, technical needs, and role to <Link to={'/employers/application-form'} className='text-g-1 capitalize hover:underline font-bold' >find the right fit</Link>.
                 </>
             ),
         },{
@@ -50,12 +50,12 @@ const Employers = () => {
     const ContactData = {
         mainheading: (
           <>
-            Want to see how <span className='px-0 py-0 lg:px-2 leading-tight font-semibold'> <Underlining bodytext={'Talent Avenue'} textcolor={'w-1'}/> </span>serves it's clients?
+            Searching for <span className='px-0 py-0 lg:px-2 leading-tight font-semibold'> <Underlining bodytext={'talented candidates?'} textcolor={'w-1'}/> </span>We've got you covered.
           </>
         ),
-        mainDesc: "No matter the size of your hiring needs, we’ve got you covered – From Temporary Staffing to direct hires, we're ready to assist you.",
-        button: 'Contact Us Now',
-        buttonLink: '/',
+        mainDesc: "We specialize in delivering exceptional permanent placement solutions, helping you secure the right candidates to drive your business forward.",
+        button: 'Apply for candidates',
+        buttonLink: '/employers/application-form',
         subHead: 'Your advantages with talent avenue',
         subOptions:[
           {

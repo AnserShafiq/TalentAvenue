@@ -182,7 +182,7 @@ const FormStructure = () => {
 };
 export const EmployersFormData = {
     Left: {
-        Heading:'Employees Request',
+        Heading:'Employers Request',
         Description: "Let us know the position you need to fill, and Intellect Workforce will help you find the right fit. Please complete the form below, and we'll contact you to initiate the recruitment process."
     },
     Right: () => <FormStructure />

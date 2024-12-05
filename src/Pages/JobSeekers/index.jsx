@@ -21,7 +21,7 @@ const JobSeekers = () => {
       name: 'Reach Out to Us',
       line:
         <>
-          <Link className='text-g-1 capitalize hover:underline font-bold' to={'/job-seekers'}>Fill out our contact form</Link> to get started. We're here to address your questions and provide the support you need.
+          We're here to address your questions and provide the support you need. <Link className='text-g-1 capitalize hover:underline font-bold' to={'/job-seekers/application-form'}>Fill out application</Link> to get started. 
         </>,
     },{
       no: 2,
@@ -52,12 +52,12 @@ const JobSeekers = () => {
   const ContactData = {
     mainheading: (
       <>
-        Want to see how <span className='px-0 py-0 lg:px-2 leading-tight font-semibold'> <Underlining bodytext={'Talent Avenue'} textcolor={'w-1'}/> </span>serves it's clients?
+        Searching for the <span className='px-0 py-0 lg:px-2 leading-tight font-semibold'> <Underlining bodytext={'Perfect Career'} textcolor={'w-1'}/> </span>match with ease?
       </>
     ),
-    mainDesc: "No matter the size of your hiring needs, we’ve got you covered – From Temporary Staffing to direct hires, we're ready to assist you.",
-    button: 'Contact Us Now',
-    buttonLink: '/',
+    mainDesc: "Talent Avenue is dedicated to helping you find the best job options tailored to your skills, experience, and ambitions.",
+    button: 'Connect with us',
+    buttonLink: '/job-seekers/application-form',
     subHead: 'Your advantages with talent avenue',
     subOptions:[
       {

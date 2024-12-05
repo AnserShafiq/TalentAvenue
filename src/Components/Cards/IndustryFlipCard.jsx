@@ -34,13 +34,13 @@ const IndustryFlipCard = ({target}) => {
                 <div className="flex flex-col items-center">
                   <Link
                     className="px-3 py-[1.5%] capitalize text-g-1 rounded-[20px] border-2 text-[1.1rem] lg:text-[1.3rem] bg-[#00000055] hover:bg-black transition-transform duration-[0.5s] ease-in-out hover:scale-[1.05] border-g-1 w-fit mb-4"
-                    to="/job-seekers/job-application"
+                    to="/job-seekers/application-form"
                   >
                     Looking for jobs
                   </Link>
                   <Link
                     className="px-3 py-[1.5%] capitalize text-g-1 rounded-[20px] border-2 text-[1.1rem] lg:text-[1.3rem] bg-[#00000055] hover:bg-black transition-transform duration-[0.5s] ease-in-out hover:scale-[1.05] border-g-1 w-fit"
-                    to="/employers/employees-required"
+                    to="/employers/application-form"
                   >
                     Looking for candidates
                   </Link>

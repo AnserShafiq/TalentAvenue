@@ -40,14 +40,14 @@ export const industriesWeSupport = {
 }
 export const employersData = {
     Name: 'Employers',
-    Icon: <IoBriefcase/>,Link:'/employers/application-form',
+    Icon: <IoBriefcase/>,Link:'/employers',
     TaglineSimple: 'Gather more info about',
     TaglineUnderlined: 'Talent we provides!!',
 }
 export const jobseekersData = {
     Name: 'Job Seekers',
     Icon: <FaHelmetSafety/>,
-    Link:'/job-seekers/application-form',
+    Link:'/job-seekers',
     TaglineSimple: 'Looking for Job options',
     TaglineUnderlined: 'enrol to attract',
 }

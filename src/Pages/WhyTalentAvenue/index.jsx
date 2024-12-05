@@ -44,14 +44,20 @@ const WhyTalentAvenue = () => {
         },
     ]
     const ContactData = {
-        mainheading: (
+        mainheading: [(
           <>
-            Want to see how <span className='px-0 py-0 lg:px-2 leading-tight font-semibold'> <Underlining bodytext={'Talent Avenue'} textcolor={'w-1'}/> </span>serves it's clients?
+            Ever thought how<span className='px-0 py-0 lg:px-2 leading-tight font-semibold'> <Underlining bodytext={'Talent Avenue'} textcolor={'w-1'}/> </span>makes perfect matches?
           </>
         ),
-        mainDesc: "No matter the size of your hiring needs, we’ve got you covered – From Temporary Staffing to direct hires, we're ready to assist you.",
-        button: 'Contact Us Now',
-        buttonLink: '/',
+        (
+          <>
+            Want to understand <span className='px-0 py-0 lg:px-2 leading-tight font-semibold'> <Underlining bodytext={"Talent Avenue's"} textcolor={'w-1'}/> </span>secret to success?
+          </>
+        )
+      ],
+        mainDesc: ['From job seekers to employers, our permanent placement solutions are focused on delivering results with care.','Whether matching jobs or talent, our permanent placement services are built around your precise needs and goals.'],
+        button: ['Explore Us Now','To Learn More'],
+        buttonLink: ['/industries-we-deal','/how-we-work'],
         subHead: 'Your advantages with talent avenue',
         subOptions:[
           {
@@ -86,7 +92,7 @@ const WhyTalentAvenue = () => {
             <RecruitmentSols />
 
             <div className='my-[5%]'>
-            <ContactCard mainHead={ContactData.mainheading} mainDesc={ContactData.mainDesc} button={ContactData.button} buttonLink={ContactData.buttonLink} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
+            <ContactCard mainHead={ContactData.mainheading[0]} mainDesc={ContactData.mainDesc[0]} button={ContactData.button[0]} buttonLink={ContactData.buttonLink[0]} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
             </div>
 
             <IntroVideo/>
@@ -101,7 +107,7 @@ const WhyTalentAvenue = () => {
 
 
             <div className='my-[5%]'>
-            <ContactCard mainHead={ContactData.mainheading} mainDesc={ContactData.mainDesc} button={ContactData.button} buttonLink={ContactData.buttonLink} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
+            <ContactCard mainHead={ContactData.mainheading[1]} mainDesc={ContactData.mainDesc[1]} button={ContactData.button[1]} buttonLink={ContactData.buttonLink[1]} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
             </div>
         </>
     )

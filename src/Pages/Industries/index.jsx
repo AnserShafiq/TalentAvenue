@@ -15,12 +15,12 @@ const OurIndustries = () => {
   const ContactData = {
     mainheading: (
       <>
-        Want to see how <span className='px-0 py-0 lg:px-2 leading-tight font-semibold'> <Underlining bodytext={'Talent Avenue'} textcolor={'w-1'}/> </span>serves it's clients?
+        Want to know how <span className='px-0 py-0 lg:px-2 leading-tight font-semibold'> <Underlining bodytext={'Talent Avenue'} textcolor={'w-1'}/> </span>delivers services?
       </>
     ),
-    mainDesc: "No matter the size of your hiring needs, we’ve got you covered – From Temporary Staffing to direct hires, we're ready to assist you.",
-    button: 'Contact Us Now',
-    buttonLink: '/employers/application-form',
+    mainDesc: "Be it your dream job or the perfect hire, our permanent placement solutions cater to your specific needs with unmatched attention.",
+    button: 'To Get Linked',
+    buttonLink: 'Popup',
     subHead: 'Your advantages with talent avenue',
     subOptions:[
       {

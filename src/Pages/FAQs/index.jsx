@@ -12,12 +12,12 @@ const FAQs = () => {
     const ContactData = {
         mainheading: (
           <>
-            Want to see how <span className='px-0 py-0 lg:px-2 leading-tight font-semibold'> <Underlining bodytext={'Talent Avenue'} textcolor={'w-1'}/> </span>serves it's clients?
+            To experience how <span className='px-0 py-0 lg:px-2 leading-tight font-semibold'> <Underlining bodytext={'Talent Avenue'} textcolor={'w-1'}/> </span>helps clients achieve more!
           </>
         ),
-        mainDesc: "No matter the size of your hiring needs, we’ve got you covered – From Temporary Staffing to direct hires, we're ready to assist you.",
-        button: 'Contact Us Now',
-        buttonLink: '/',
+        mainDesc: "Whether finding the right hire or career move, our permanent placement services deliver precision and care.",
+        button: 'Apply Now',
+        buttonLink: 'Popup',
         subHead: 'Your advantages with talent avenue',
         subOptions:[
           {
