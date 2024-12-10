@@ -2,6 +2,9 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 
 const FormStructure = () => {
+    const [emailSent, setEmailSent] = useState(false)
+    const [fileError, setFileError] = useState('')
+
     const [submissionCheck, setSubmissionCheck] = useState({
         one: '',
         two: ''
@@ -25,7 +28,7 @@ const FormStructure = () => {
         },
         Experience:{
           experienceType:'',
-          EveningevCompany:'',
+          prevCompany:'',
           contactNumber:'',
           jobPost:'',
           joiningDate:'',
@@ -41,28 +44,52 @@ const FormStructure = () => {
         }
     });
 
+
     const handleSubmissionCheck = (e) => {
         const {name, value} = e.target;
-        setSubmissionCheck((Eveningev) => ({
-            ...Eveningev,
+        setSubmissionCheck((prev) => ({
+            ...prev,
             [name]:value,
         }))
     }
 
     const handleEntry = (e) => {
-        const { name, value, dataset } = e.target;
+        let { name, value, files, dataset } = e.target;
         const parent = dataset.parent;
-        setFields((EveningevFields) => ({
-            ...EveningevFields,
+
+        if(name === 'contactNumber'){
+            let forNumberCheck = value.replace(/\D/g,'');
+            if(forNumberCheck.length >10){
+                forNumberCheck = forNumberCheck.slice(0,10);
+            }
+            forNumberCheck = forNumberCheck.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2 $3');
+            value = forNumberCheck
+        }else if(name === 'resume'){
+            const allowedTypes = ['application/msword','text/plain','application/pdf']
+            const file=files[0]
+            if(file && allowedTypes.includes(file.type)){
+                value=file
+                console.log(value)
+                setFileError('')
+            }else{
+                setFileError('Upload .doc, .docx or .pdf')
+                e.target.value = null
+            }
+            
+        }
+
+        setFields((prevFields) => ({
+            ...prevFields,
             [parent]: {
-                ...EveningevFields[parent],
+                ...prevFields[parent],
                 [name]: value,
             },
         }));
     };
 
-    const handleFormSubmission=(e) =>{
-        e.EveningeventDefault();
+    const handleFormSubmission=async(e) =>{
+        e.preventDefault();
+        setEmailSent(true)
         console.log(fields)
     }
 
@@ -70,9 +97,13 @@ const FormStructure = () => {
         if(submissionCheck.one === 'Check' && submissionCheck.two ==='Check'){
             console.log(submissionCheck)
         }
-    },[submissionCheck])
 
-    return (
+    },[submissionCheck,fields])
+
+    return emailSent ? (
+        <div className="flex w-full h-[50vh] bg-[#323337] justify-center text-center items-center text-mh-m lg:text-mh-d uppercase font-bold tracking-wide tracking-wide text-g-1 px-10">
+            Thank you for your time, our team will reach back to you as soon as possible.</div>
+    ):(    
         <div className="flex flex-col w-[90%] lg:w-full h-full bg-[#323337] mx-auto px-4 lg:px-8 py-6">
             <h3 className="text-[0.9rem] lg:text-[1.1rem] text-g-1">
                 Fill the form given below, we will reach back to you as soon as possible.
@@ -90,18 +121,18 @@ const FormStructure = () => {
                 </div>
                 <div className="flex flex-col mb-2 w-[49%]">
                     <label className="text-[1.2rem] tracking-wide text-w-1">Email <span className="text-g-1">*</span></label>
-                    <input className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" required type="email" name="email" data-parent="Applicant" value={fields.Applicant.email} onChange={handleEntry} />
+                    <input className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" type="email" required name="email" data-parent="Applicant" value={fields.Applicant.email} onChange={handleEntry} />
                 </div>
                 <div className="flex flex-col w-[100%] lg:w-[49%] mb-2">
                     <label className="text-[1.2rem] tracking-wide text-w-1">Contact Number <span className="text-g-1">*</span></label>
-                    <input className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" required type="tel" name="contactNumber" data-parent="Applicant" value={fields.Applicant.contactNumber} onChange={handleEntry} />
+                    <input className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" type="tel" name="contactNumber" required data-parent="Applicant" value={fields.Applicant.contactNumber} onChange={handleEntry} />
                 </div>
                 <div className="flex flex-col w-[100%] lg:w-[49%] mb-2">
                     <label className="text-[1.2rem] tracking-wide text-w-1">Gender <span className="text-g-1">*</span></label>
                     <div className="flex flex-row items-center h-full text-w-1 text-[1.1rem] font-[300]">
-                      <label className='cursor-pointer flex items-center gap-1 mr-6 lg:mr-4'><input className='' type="radio" name="gender" value="Male" data-parent="Applicant" checked={fields.Applicant.gender === 'Male'} onChange={handleEntry} /> Male</label>
-                      <label className='cursor-pointer flex items-center gap-1 mr-6 lg:mr-4'><input className='' type="radio" name="gender" value="Female" data-parent="Applicant" checked={fields.Applicant.gender === 'Female'} onChange={handleEntry} /> Female</label>  
-                      <label className='cursor-pointer flex items-center gap-1 mr-6 lg:mr-4'><input className='' type="radio" name="gender" value="Other" data-parent="Applicant" checked={fields.Applicant.gender === 'Other'} onChange={handleEntry} /> Other</label>  
+                      <label className='cursor-pointer flex items-center gap-1 mr-6 lg:mr-4'><input className='' type="radio" name="gender" value="Male" data-parent="Applicant" checked={fields.Applicant.gender === 'Male'} onChange={handleEntry} required /> Male</label>
+                      <label className='cursor-pointer flex items-center gap-1 mr-6 lg:mr-4'><input className='' type="radio" name="gender" value="Female" data-parent="Applicant" checked={fields.Applicant.gender === 'Female'} onChange={handleEntry}  required/> Female</label>  
+                      <label className='cursor-pointer flex items-center gap-1 mr-6 lg:mr-4'><input className='' type="radio" name="gender" value="Other" data-parent="Applicant" checked={fields.Applicant.gender === 'Other'} onChange={handleEntry}  required/> Other</label>  
                     </div>
                 </div>
                 <div className="flex flex-col w-[100%] lg:w-[49%] mb-2">
@@ -114,7 +145,7 @@ const FormStructure = () => {
                 </div>
                 <div className="flex flex-col w-[100%] mb-2">
                     <label className="text-[1.2rem] tracking-wide text-w-1">Residential Status <span className="text-g-1">*</span></label>
-                    <select className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" name="residentialStatus" value={fields.Applicant.residentialStatus} onChange={handleEntry} required>
+                    <select className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" required name="residentialStatus" data-parent='Applicant' value={fields.Applicant.residentialStatus} onChange={handleEntry}>
                         <option className="bg-[#323337] text-g-1" value={''}>Select option</option>
                         <option className="bg-[#323337] text-g-1" value={'Citizen'}>Citizen</option>
                         <option className="bg-[#323337] text-g-1" value={'PR'}>PR</option>
@@ -149,8 +180,8 @@ const FormStructure = () => {
                 <div className="flex flex-col w-[100%] mb-2">
                     <label className="text-[1.2rem] tracking-wide text-w-1">Are you an experienced or freshie? <span className="text-g-1">*</span></label>
                     <div className="flex flex-row items-center h-full text-w-1 text-[1.1rem] font-[300]">
-                      <label className='cursor-pointer flex items-center gap-1 mr-6 lg:mr-4'><input className='' type="radio" name="experienceType" value="Experienced" checked={fields.Experience.experienceType === 'Experienced'} data-parent="Experience" onChange={handleEntry} /> Experienced</label>
-                      <label className='cursor-pointer flex items-center gap-1 mr-6 lg:mr-4'><input className='' type="radio" name="experienceType" value="Fresher" checked={fields.Experience.experienceType === 'Fresher'} data-parent="Experience" onChange={handleEntry} /> Fresher</label>  
+                      <label className='cursor-pointer flex items-center gap-1 mr-6 lg:mr-4'><input className='' type="radio" name="experienceType" required value="Experienced" checked={fields.Experience.experienceType === 'Experienced'} data-parent="Experience" onChange={handleEntry} /> Experienced</label>
+                      <label className='cursor-pointer flex items-center gap-1 mr-6 lg:mr-4'><input className='' type="radio" name="experienceType" required value="Fresher" checked={fields.Experience.experienceType === 'Fresher'} data-parent="Experience" onChange={handleEntry} /> Fresher</label>  
                     </div>
                 </div>
                 {
@@ -158,7 +189,7 @@ const FormStructure = () => {
                     <>
                       <div className="flex flex-col w-[100%] mb-2">
                         <label className="text-[1.2rem] tracking-wide text-w-1">Last Company's Name <span className="text-g-1">*</span></label>
-                        <input className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" required type="text" name="EveningevCompany" data-parent="Experience" value={fields.Experience.EveningevCompany} onChange={handleEntry} />
+                        <input className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" required type="text" name="prevCompany" data-parent="Experience" value={fields.Experience.prevCompany} onChange={handleEntry} />
                       </div>
                       <div className="flex flex-col w-[100%] lg:w-[49%] mb-2">
                         <label className="text-[1.2rem] tracking-wide text-w-1">Company's Contact <span className="text-g-1">*</span></label>
@@ -170,11 +201,11 @@ const FormStructure = () => {
                       </div>
                       <div className="flex flex-col w-[100%] lg:w-[49%] mb-2">
                         <label className="text-[1.2rem] tracking-wide text-w-1">Joining Date <span className="text-g-1">*</span></label>
-                        <input className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" required type="date" name="joinigDate" data-parent="Experience" value={fields.Experience.joiningDate} onChange={handleEntry} />
+                        <input className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" type="date" name="joinigDate" data-parent="Experience" value={fields.Experience.joiningDate} onChange={handleEntry} />
                       </div>
                       <div className="flex flex-col w-[100%] lg:w-[49%] mb-2">
                         <label className="text-[1.2rem] tracking-wide text-w-1">Leaving Date <span className="text-g-1">*</span></label>
-                        <input className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" required type="date" name="leavingDate" data-parent="Experience" value={fields.Experience.leavingDate} onChange={handleEntry} />
+                        <input className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" type="date" name="leavingDate" data-parent="Experience" value={fields.Experience.leavingDate} onChange={handleEntry} />
                       </div>
                     </>
                   ):(null)
@@ -184,7 +215,7 @@ const FormStructure = () => {
                 <h2 className="text-[1.3rem] lg:text-[1.5rem] uppercase tracking-wide font-semibold text-g-1 w-full ">Target Field</h2>
                 <div className="flex flex-col w-[100%] lg:w-[49%] mb-2">
                     <label className="text-[1.2rem] tracking-wide text-w-1">Industry <span className="text-g-1">*</span></label>
-                    <select className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" name="industry" value={fields.JobTarget.industry} data-parent="JobTarget" onChange={handleEntry} required>
+                    <select className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" name="industry" value={fields.JobTarget.industry} data-parent="JobTarget" onChange={handleEntry}>
                         <option className="bg-[#323337] text-g-1" value={''}>Select industry</option>
                         <option className="bg-[#323337] text-g-1" value={'Information technology'}>Information technology</option>
                         <option className="bg-[#323337] text-g-1" value={'Healthcare'}>Healthcare</option>
@@ -207,7 +238,7 @@ const FormStructure = () => {
                 </div>
                 <div className="flex flex-col w-[100%] lg:w-[49%] mb-2">
                     <label className="text-[1.2rem] tracking-wide text-w-1">Target Shift <span className="text-g-1">*</span></label>
-                    <select className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" name="shift" value={fields.JobTarget.shift} data-parent="JobTarget" onChange={handleEntry} required>
+                    <select className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" name="shift" value={fields.JobTarget.shift} data-parent="JobTarget" onChange={handleEntry}>
                         <option className="bg-[#323337] text-g-1" value={''}>Select shift</option>
                         <option className="bg-[#323337] text-g-1" value={'Morning'}>Morning</option>
                         <option className="bg-[#323337] text-g-1" value={'Evening'}>Evening</option>
@@ -219,7 +250,7 @@ const FormStructure = () => {
 
                 <div className="flex flex-col w-[100%] lg:w-[49%] mb-2">
                     <label className="text-[1.2rem] tracking-wide text-w-1">Proficiency In English <span className="text-g-1">*</span></label>
-                    <select className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" name="shift" value={fields.JobTarget.shift} data-parent="JobTarget" onChange={handleEntry} required>
+                    <select className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" name="english" value={fields.JobTarget.english} data-parent="JobTarget" onChange={handleEntry}>
                         <option className="bg-[#323337] text-g-1" value={''}>Select level</option>
                         <option className="bg-[#323337] text-g-1" value={'Speak'}>Speak</option>
                         <option className="bg-[#323337] text-g-1" value={'Read'}>Read</option>
@@ -236,22 +267,24 @@ const FormStructure = () => {
                 </div>
                 <div className="flex flex-col w-[100%] mb-2">
                     <label className="text-[1.2rem] tracking-wide text-w-1">Upload your resume <span className="text-g-1">*</span></label>
-                    <input className="text-[1.1rem] text-w-1 font-[300]" type="file"/>
+                    <input className="text-[1.1rem] text-w-1 font-[300]" type="file" name="resume" data-parent='JobTarget' onChange={handleEntry} accept=".doc, .docx, .pdf"/>
+                    {fileError && <p className="text-[1rem] text-red-900">{fileError}</p> }
                 </div>
 
                 <div className="flex flex-col w-[100%] mt-6 mb-2">
-                    <label className='cursor-pointer block items-start gap-x-1 leading-tight text-w-1'><input className='mt-[0%] lg:mt-[0.4%]' type="checkbox" name="one" value="Check" checked={submissionCheck.one === 'Check'} onChange={handleSubmissionCheck} /> I acknowledge that I have read and accepted the <Link className="text-g-1 ml-1" to={'/privacy-policy'}>Privacy Policy</Link>, <Link className="text-g-1 ml-1" to={'/terms-of-use'}>Terms of Use</Link> and<Link className="text-g-1 ml-1" to={'/cookies-policy'}>Cookies Policy</Link>.</label>
-                    <label className='cursor-pointer block items-start mt-2 gap-x-1 leading-tight text-w-1'><input className='mt-[0%] lg:mt-1 ' type="checkbox" name="two" value="Check" checked={submissionCheck.two === 'Check'} onChange={handleSubmissionCheck} /> Yes, please keep me updated on Talent Avenue news, events, offers, or any marketing activity such as the latest employment data and early access to innovative tools. This information may be delivered by post, email, SMS, MMS, phone, social media, push notifications in Apps, and other means. I understand that I may opt out at any time, and my Eveningeferences are always respected.</label>
+                    <label className='cursor-pointer block items-start gap-x-1 leading-tight text-w-1'><input className='mt-[0%] lg:mt-[0.4%]' type="checkbox" name="one" value="Check" checked={submissionCheck.one === 'Check'} onChange={handleSubmissionCheck} required /> I acknowledge that I have read and accepted the <Link className="text-g-1 ml-1" to={'/privacy-policy'}>Privacy Policy</Link>, <Link className="text-g-1 ml-1" to={'/terms-of-use'}>Terms of Use</Link> and<Link className="text-g-1 ml-1" to={'/cookies-policy'}>Cookies Policy</Link>.</label>
+                    <label className='cursor-pointer block items-start mt-2 gap-x-1 leading-tight text-w-1'><input className='mt-[0%] lg:mt-1 ' type="checkbox" name="two" value="Check" checked={submissionCheck.two === 'Check'} onChange={handleSubmissionCheck} required /> Yes, please keep me updated on Talent Avenue news, events, offers, or any marketing activity such as the latest employment data and early access to innovative tools. This information may be delivered by post, email, SMS, MMS, phone, social media, push notifications in Apps, and other means. I understand that I may opt out at any time, and my Eveningeferences are always respected.</label>
                 </div>
                 <button type="submit" className="text-[1.3rem] text-w-1 bg-g-1 mt-4 lg:mt-1 font-bold uppercase mx-auto px-4 py-[1.5%] rounded-2xl tracking-wide hover:text-g-1 hover:bg-[#4f4f4f]">Submit</button>
             </form>
+            
         </div>
-    );
+    )
 };
 export const JobSeekersFormData = {
     Left: {
         Heading:'Job Application',
-        Description: "Thank you for considering a career opportunity with Talent Avenue. Please fill out the required information below and upload your most recent resume for our review and consideration."
+        Description: "Thank you for considering a career opportunity with Talent Avenue. Please fill out the information below and upload your most recent resume for our review and consideration."
     },
     Right: () => <FormStructure />
 }
