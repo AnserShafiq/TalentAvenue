@@ -13,12 +13,13 @@ import ContactUs from './Pages/ContactUS/index.jsx';
 import { CookiesPolicy, PrivacyPolicy, SecurityPhishing, TermsOfUse } from './Pages/ExtraPages/ExportPage.jsx';
 import ReactLoading from 'react-loading';
 import { EmployersForm, JobSeekersForm } from './Pages/ApplicationForms/index.jsx';
+import UnderConstruction from './Pages/Underconstruction/index.jsx';
 
 
 
 const AppBody = () =>{
 
-  
+  const underConstruction = true;
 
   const location= useLocation();
   const [loading, setLoading] = useState(true)
@@ -53,26 +54,38 @@ const AppBody = () =>{
 
   return (
     <div>
-      <Header />
-      <div className=''>
-        <Routes>
-          <Route path='/' element={<Home />}/>
-          <Route path='/why-talent-avenue' element={<WhyTalentAvenue />} />
-          <Route path='/faqs' element={<FAQs />} />
-          <Route path='/how-we-work' element={<HowWeWorks />}/>
-          <Route path='/employers' element={<Employers />} />
-          <Route path='/employers/application-form' element={<EmployersForm />}/>
-          <Route path='/job-seekers' element={<JobSeekers />} />
-          <Route path='/job-seekers/application-form' element={<JobSeekersForm />}/>
-          <Route path='/industries-we-deal' element={<OurIndustries />} />
-          <Route path='/contact-us' element={<ContactUs />} />
-          <Route path='/privacy-policy' element={<PrivacyPolicy />}/>
-          <Route path='/security-phishing' element={<SecurityPhishing />}/>
-          <Route path='/cookies-policy' element={<CookiesPolicy />}/>
-          <Route path='/terms-of-use' element={<TermsOfUse />}/>
-        </Routes>
-      </div>
-      <Footer />
+      {
+        underConstruction ? (
+          <div className='flex items-center justify-center h-screen '>
+            <Routes>
+              <Route path='/' element={<UnderConstruction />}/>
+            </Routes>  
+          </div>
+        ) : (
+          <>
+            <Header />
+            <div className=''>
+              <Routes>
+                <Route path='/' element={<Home />}/>
+                <Route path='/why-talent-avenue' element={<WhyTalentAvenue />} />
+                <Route path='/faqs' element={<FAQs />} />
+                <Route path='/how-we-work' element={<HowWeWorks />}/>
+                <Route path='/employers' element={<Employers />} />
+                <Route path='/employers/application-form' element={<EmployersForm />}/>
+                <Route path='/job-seekers' element={<JobSeekers />} />
+                <Route path='/job-seekers/application-form' element={<JobSeekersForm />}/>
+                <Route path='/industries-we-deal' element={<OurIndustries />} />
+                <Route path='/contact-us' element={<ContactUs />} />
+                <Route path='/privacy-policy' element={<PrivacyPolicy />}/>
+                <Route path='/security-phishing' element={<SecurityPhishing />}/>
+                <Route path='/cookies-policy' element={<CookiesPolicy />}/>
+                <Route path='/terms-of-use' element={<TermsOfUse />}/>
+              </Routes>
+            </div>
+            <Footer />
+          </>
+        )
+      }
     </div>
   )
 }
