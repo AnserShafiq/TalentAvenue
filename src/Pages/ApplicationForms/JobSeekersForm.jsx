@@ -70,7 +70,7 @@ const FormStructure = () => {
             const file=files[0]
             if(file && allowedTypes.includes(file.type)){
                 value=file
-                console.log(value)
+                // console.log(value)
                 setFileError('')
             }else{
                 setFileError('Upload .doc, .docx or .pdf')
