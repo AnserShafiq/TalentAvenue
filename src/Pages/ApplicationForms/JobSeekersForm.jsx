@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
+import emailjs from 'emailjs-com'
 
 const FormStructure = () => {
     const [emailSent, setEmailSent] = useState(false)
@@ -89,6 +90,13 @@ const FormStructure = () => {
 
     const handleFormSubmission=async(e) =>{
         e.preventDefault();
+        await emailjs.send('talent_avenue_id','talent_avenue_js',fields,'XdgFaQthKl7rQFwSR')
+        .then((res) => {
+            setEmailSent(true)
+            // console.log('Email Sent', res);
+        }).catch((err) =>{
+            console.error('Email sending error => ', err)
+        })
         setEmailSent(true)
         console.log(fields)
     }
@@ -201,7 +209,7 @@ const FormStructure = () => {
                       </div>
                       <div className="flex flex-col w-[100%] lg:w-[49%] mb-2">
                         <label className="text-[1.2rem] tracking-wide text-w-1">Joining Date <span className="text-g-1">*</span></label>
-                        <input className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" type="date" name="joinigDate" data-parent="Experience" value={fields.Experience.joiningDate} onChange={handleEntry} />
+                        <input className="text-[1.1rem] rounded-xl text-w-1 font-[300] bg-[#bc9a641e] px-3 py-[6px]" type="date" name="joiningDate" data-parent="Experience" value={fields.Experience.joiningDate} onChange={handleEntry} />
                       </div>
                       <div className="flex flex-col w-[100%] lg:w-[49%] mb-2">
                         <label className="text-[1.2rem] tracking-wide text-w-1">Leaving Date <span className="text-g-1">*</span></label>

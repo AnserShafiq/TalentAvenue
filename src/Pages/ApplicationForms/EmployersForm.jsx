@@ -74,15 +74,15 @@ const FormStructure = () => {
     const handleFormSubmission=async(e) =>{
         e.preventDefault();
 
-        await emailjs.send('service-id','form-id',fields,'public-id')
+        await emailjs.send('talent_avenue_id','talent_avenue_emp',fields,'XdgFaQthKl7rQFwSR')
         .then((res) => {
             setEmailSent(true)
-            console.log('Email Sent', res);
+            // console.log('Email Sent', res);
         }).catch((err) =>{
             console.error('Email sending error => ', err)
         })
         setEmailSent(true)
-        console.log(fields)
+        // console.log(fields)
     }
 
     useEffect(() => {

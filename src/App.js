@@ -19,7 +19,7 @@ import UnderConstruction from './Pages/Underconstruction/index.jsx';
 
 const AppBody = () =>{
 
-  const underConstruction = true;
+  const underConstruction = false;
 
   const location= useLocation();
   const [loading, setLoading] = useState(true)

@@ -21,6 +21,29 @@ const CU2 = () => {
       console.log(value)
     }
 
+    const handleSubmission = async(e) => {
+      e.preventDefault();
+
+      const ToSend = {
+        'Name': ContactForm.Name,
+        'Email': ContactForm.Email,
+        'Contact Number': ContactForm.ContactNumber,
+        'Reason': ContactForm.Reason,
+        'Message': ContactForm.Message
+      }
+      const sendingMail = await fetch('https://formspree.io/f/xpwwlggb',{
+          method: 'POST',
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(ToSend)
+      });
+      if (sendingMail.ok){
+          console.log('Contact Form Mail Sent!!!');
+      }
+    }
+
     return (
     <div className="flex flex-col lg:flex-row my-[10%] lg:mt-10 lg:mb-14 w-[95%] lg:w-[80%] 2xl:w-[70%] mx-auto">
       
@@ -34,7 +57,7 @@ const CU2 = () => {
 
       <div className="flex flex-col justify-center items-start py-6 lg:py-0 px-6 lg:px-10 lg:w-[50%]">
         <div className="text-[1.8rem] lg:text-[2.3rem] font-bold mb-4"><Underlining bodytext={'To Leave Us A Message'} textcolor={'w-1'} position={'left'}/></div>
-        <form className='w-full'>
+        <form className='w-full' onSubmit={handleSubmission}>
             <div className='flex flex-col w-full mb-3'>
                 <label className='text-[1.5rem] text-w-1 font-[500] capitalize tracking-wider'>Full name:</label>
                 <input className='w-full px-3 py-2 rounded-[8px] text-[1.1rem] placeholder:text-g-1 lg:text-[1.3rem] text-w-1 bg-[#0000007f]' type='text' name='Name' value={ContactForm.Name} placeholder='Enter your full name' onChange={handleEntry} />

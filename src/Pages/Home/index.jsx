@@ -20,12 +20,12 @@ const Home = () => {
     Headline: 'Want to build a positive workplace for productivity?',
   }
   const section1SecondLine = (
-      <h3 className='text-[1.4rem] lg:text-[1.8rem] flex flex-col lg:flex-row'>
+      <span className='text-[1.4rem] lg:text-[1.8rem] flex flex-col lg:flex-row'>
         Click Here  
         <div className='ml-0 lg:ml-2 flex flex-col items-center '>
           <Popup btnCSS={'font-extrabold leading-normal uppercase'}><Underlining bodytext={'To Find Talent !!!'} textcolor='g-1'/></Popup>
         </div>
-      </h3>
+      </span>
     )
 
   const ContactData = {
