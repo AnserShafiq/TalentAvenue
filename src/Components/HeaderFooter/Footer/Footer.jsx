@@ -8,7 +8,7 @@ import { FooterPages } from '../MenuItems';
 import { FaRegCopyright as CP } from "react-icons/fa6";
 import Underlining from '../../Underlining.jsx';
 import { FaEnvelopeOpenText as Mail} from "react-icons/fa";
-import { PiPhoneCallDuotone as Call} from "react-icons/pi";
+// import { PiPhoneCallDuotone as Call} from "react-icons/pi";
 
 
 
@@ -25,7 +25,8 @@ const Footer = () => {
             <div className='flex flex-col px-3 lg:px-5 py-4'>
                 <h3 className='text-[1.9rem] text-w-1 font-bold leading-tight tracking-wide' > Unlock Opportunities</h3>
                 <Underlining textcolor={'g-1'} bodytext={UnderlineText} />    
-                <Link to={'/'} className='text-[1.2rem] text-w-1 flex items-center font-semibold capitalize tracking-wide mt-4 hover:text-g-1 border-2 px-2 py-1 rounded-md border-transparent hover:border-g-1 w-fit' > <Call className='text-[1.6rem] text-g-1 mr-2'/>(123) 456 7890</Link>
+                <h3 className='text-[1.3rem] text-w-1 flex items-center font-semibold tracking-wide mt-5 px-2 py-1 w-fit'>To Reach Us...</h3>
+                {/* <Link to={'/'} className='text-[1.2rem] text-w-1 flex items-center font-semibold capitalize tracking-wide mt-4 hover:text-g-1 border-2 px-2 py-1 rounded-md border-transparent hover:border-g-1 w-fit' > <Call className='text-[1.6rem] text-g-1 mr-2'/>(123) 456 7890</Link> */}
                 <Link to={'/'} className='text-[1.2rem] text-w-1 flex items-center  font-semibold tracking-wide hover:text-g-1 border-2 px-2 py-1 rounded-md border-transparent hover:border-g-1 w-fit' ><Mail className='text-[1.4rem] text-g-1 mr-2'/>info@talentavenue.ca</Link>
             </div>
             <div className='flex flex-col px-3 lg:px-5 py-4'>
