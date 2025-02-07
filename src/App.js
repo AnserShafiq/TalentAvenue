@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './Pages/Home/index.jsx';
 import WhyTalentAvenue from './Pages/WhyTalentAvenue/index.jsx';
@@ -14,18 +14,6 @@ import { CookiesPolicy, PrivacyPolicy, SecurityPhishing, TermsOfUse } from './Pa
 import ReactLoading from 'react-loading';
 import { EmployersForm, JobSeekersForm } from './Pages/ApplicationForms/index.jsx';
 import UnderConstruction from './Pages/Underconstruction/index.jsx';
-
-
-const LoadingElement = () => {
-  return(
-    <div className='h-screen w-screen flex justify-center flex-col items-center text-center bg-[#0000007f]'>
-      <ReactLoading type='spinningBubbles' color='#bc9a64' height={5+'rem'} />
-      <h3 className='text-2xl lg:text-3xl tracking-wide font-[600] text-g-1'>
-        Loading...
-      </h3>
-    </div>
-  )
-}
 
 const AppBody = () =>{
 
@@ -64,7 +52,7 @@ const AppBody = () =>{
 
   return (
     
-    <Suspense fallback={<LoadingElement />}>
+    // <Suspense fallback={<LoadingElement />}>
     <div>
       {
         underConstruction ? (
@@ -99,7 +87,7 @@ const AppBody = () =>{
         )
       }
     </div>
-    </Suspense>
+    // </Suspense>
   )
 }
 
