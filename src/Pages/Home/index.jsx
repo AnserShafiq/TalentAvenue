@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import BG1 from '../../Images/Home/Home-1.webp'
 import Section1 from '../CommonSections/Section1.jsx';
 import H2 from './Sections/H2.jsx';
@@ -13,7 +13,6 @@ import Handshake from '../../Images/Home/Handshake.png'
 import IntroVideo from '../CommonSections/IntroVideo.jsx'
 import Popup from '../../Components/PopUp.jsx';
 import Testimonials from '../CommonSections/OurTestimonials.jsx';
-import LoadingElement from '../../Components/SuspenseLoading.jsx';
 
 const Home = () => {
   const Section1Data={
@@ -70,7 +69,7 @@ const Home = () => {
   }
 
   return (
-    <Suspense fallback={<LoadingElement />}>
+    <>
       <Section1 background={Section1Data.Background} bgPosition={'object-top'} headline={Section1Data.Headline} secondline={section1SecondLine} UC={true} />
       <H2 />
       <IntroVideo />
@@ -84,7 +83,7 @@ const Home = () => {
 
       <ContactCard mainHead={ContactData.mainheading[1]} mainDesc={ContactData.mainDesc[1]} button={ContactData.button[1]} buttonLink={ContactData.buttonLink[1]} subHead={ContactData.subHead} subOptions={ContactData.subOptions} />
       <div className='mb-[5%]'/>
-    </Suspense>
+    </>
   )
 }
 

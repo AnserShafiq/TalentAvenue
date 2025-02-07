@@ -15,6 +15,8 @@ import ReactLoading from 'react-loading';
 import { EmployersForm, JobSeekersForm } from './Pages/ApplicationForms/index.jsx';
 import UnderConstruction from './Pages/Underconstruction/index.jsx';
 
+
+
 const AppBody = () =>{
 
   const underConstruction = false;
@@ -34,11 +36,11 @@ const AppBody = () =>{
       return;
     }
 
-    // setLoading(true)
-    // const timer = setTimeout(()=>{
-    //   setLoading(false)
-    // },3000)
-    // return () => clearTimeout(timer);
+    setLoading(true)
+    const timer = setTimeout(()=>{
+      setLoading(false)
+    },3000)
+    return () => clearTimeout(timer);
   },[location])
 
   if(loading) return(
@@ -51,8 +53,6 @@ const AppBody = () =>{
   )
 
   return (
-    
-    // <Suspense fallback={<LoadingElement />}>
     <div>
       {
         underConstruction ? (
@@ -87,7 +87,6 @@ const AppBody = () =>{
         )
       }
     </div>
-    // </Suspense>
   )
 }
 
