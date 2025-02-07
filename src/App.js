@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './Pages/Home/index.jsx';
 import WhyTalentAvenue from './Pages/WhyTalentAvenue/index.jsx';
@@ -16,6 +16,16 @@ import { EmployersForm, JobSeekersForm } from './Pages/ApplicationForms/index.js
 import UnderConstruction from './Pages/Underconstruction/index.jsx';
 
 
+const LoadingElement = () => {
+  return(
+    <div className='h-screen w-screen flex justify-center flex-col items-center text-center bg-[#0000007f]'>
+      <ReactLoading type='spinningBubbles' color='#bc9a64' height={5+'rem'} />
+      <h3 className='text-2xl lg:text-3xl tracking-wide font-[600] text-g-1'>
+        Loading...
+      </h3>
+    </div>
+  )
+}
 
 const AppBody = () =>{
 
@@ -36,11 +46,11 @@ const AppBody = () =>{
       return;
     }
 
-    setLoading(true)
-    const timer = setTimeout(()=>{
-      setLoading(false)
-    },3000)
-    return () => clearTimeout(timer);
+    // setLoading(true)
+    // const timer = setTimeout(()=>{
+    //   setLoading(false)
+    // },3000)
+    // return () => clearTimeout(timer);
   },[location])
 
   if(loading) return(
@@ -53,6 +63,8 @@ const AppBody = () =>{
   )
 
   return (
+    
+    <Suspense fallback={<LoadingElement />}>
     <div>
       {
         underConstruction ? (
@@ -87,6 +99,7 @@ const AppBody = () =>{
         )
       }
     </div>
+    </Suspense>
   )
 }
 
